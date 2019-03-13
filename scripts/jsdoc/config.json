@@ -1,0 +1,25 @@
+{
+  "source": {
+    "include": [ "./" ],
+    "exclude": [
+      "./.github/",
+      "./coverage/",
+      "./dist/",
+      "./lib/",
+      "./doc/watson-developer-cloud/",
+      "./examples/",
+      "./scripts/",
+      "./node_modules/",
+      "./test/",
+      "./eslintrc.js",
+      "./iam-token-manager/"
+    ]
+  },
+  "opts": {
+    "package": "package.json",
+    "readme": "README.md",
+    "recurse": true,
+    "destination": "./doc/"
+  },
+  "plugins": ["plugins/markdown"]
+}
