@@ -16,7 +16,7 @@ For release notes, see the [CHANGELOG](CHANGELOG.md).
 You'll need:
   * An instance of COS.
   * An API key from [IBM Cloud Identity and Access Management](https://cloud.ibm.com/docs/iam/users_roles.html).
-  * **Node 6.0++**.
+  * **Node 8.0++**.
 
 ## Getting the SDK
 The preferred way to install the IBM COS Resource Configuration SDK for Node.js is to use the

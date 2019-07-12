@@ -3,8 +3,8 @@ import os = require('os');
 // tslint:disable-next-line:no-var-requires
 const pkg = require('../package.json');
 
-export function getDefaultHeaders(serviceName: string, serviceVersion: string, operationId: string): any {
-  const sdkName = 'ibm-cos-config-sdk-js';
+export function getSdkHeaders(serviceName: string, serviceVersion: string, operationId: string): any {
+  const sdkName = 'ibm-cos-resource-config-sdk-js';
   const sdkVersion = pkg.version;
   const osName = os.platform();
   const osVersion = os.release();
