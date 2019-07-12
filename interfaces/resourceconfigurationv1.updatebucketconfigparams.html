@@ -89,10 +89,12 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#activity_tracking" class="tsd-kind-icon">activity_<wbr>tracking</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#bucket" class="tsd-kind-icon">bucket</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#firewall" class="tsd-kind-icon">firewall</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#headers" class="tsd-kind-icon">headers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#if_match" class="tsd-kind-icon">if_<wbr>match</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#return_response" class="tsd-kind-icon">return_<wbr>response</a></li>
 							</ul>
 						</section>
 					</div>
@@ -101,12 +103,27 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="activity_tracking" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> activity_<wbr>tracking</h3>
+					<div class="tsd-signature tsd-kind-icon">activity_<wbr>tracking<span class="tsd-signature-symbol">:</span> <a href="resourceconfigurationv1.activitytracking.html" class="tsd-signature-type">ActivityTracking</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L229">v1.ts:229</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Enables sending log data to Activity Tracker and LogDNA to provide visibility into object read and write events. All object events are sent to the activity tracker instance defined in the <code>activity_tracker_crn</code> field.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="bucket" class="tsd-anchor"></a>
 					<h3>bucket</h3>
 					<div class="tsd-signature tsd-kind-icon">bucket<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/f310e57/resource-configuration/v1.ts#L202">v1.ts:202</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L225">v1.ts:225</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -121,12 +138,12 @@
 					<div class="tsd-signature tsd-kind-icon">firewall<span class="tsd-signature-symbol">:</span> <a href="resourceconfigurationv1.firewall.html" class="tsd-signature-type">Firewall</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/f310e57/resource-configuration/v1.ts#L204">v1.ts:204</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L227">v1.ts:227</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A filter that controls access based on the network where request originated. Requests not originating from IP addresses listed in the <code>allowed_ip</code> field will be denied.  Viewing or updating the <code>Firewall</code> element requires the requester to have the <code>manager</code> role.</p>
+							<p>An access control mechanism based on the network (IP address) where request originated. Requests not originating from IP addresses listed in the <code>allowed_ip</code> field will be denied regardless of any access policies (including public access) that might otherwise permit the request.  Viewing or updating the <code>Firewall</code> element requires the requester to have the <code>manager</code> role.</p>
 						</div>
 					</div>
 				</section>
@@ -136,7 +153,7 @@
 					<div class="tsd-signature tsd-kind-icon">headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/f310e57/resource-configuration/v1.ts#L207">v1.ts:207</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L232">v1.ts:232</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -146,7 +163,7 @@
 					<div class="tsd-signature tsd-kind-icon">if_<wbr>match<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/f310e57/resource-configuration/v1.ts#L206">v1.ts:206</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L231">v1.ts:231</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -154,6 +171,16 @@
 							<p>An Etag previously returned in a header when fetching or updating a bucket&#39;s metadata. If this value does not match the active Etag, the request will fail.</p>
 						</div>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="return_response" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> return_<wbr>response</h3>
+					<div class="tsd-signature tsd-kind-icon">return_<wbr>response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L233">v1.ts:233</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -173,6 +200,9 @@
 						<a href="../classes/resourceconfigurationv1.html" class="tsd-kind-icon">Resource<wbr>Configuration<wbr>V1</a>
 						<ul>
 							<li class=" tsd-kind-interface tsd-parent-kind-class">
+								<a href="resourceconfigurationv1.activitytracking.html" class="tsd-kind-icon">Activity<wbr>Tracking</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-class">
 								<a href="resourceconfigurationv1.bucket.html" class="tsd-kind-icon">Bucket</a>
 							</li>
 							<li class=" tsd-kind-interface tsd-parent-kind-class">
@@ -188,6 +218,9 @@
 								<a href="resourceconfigurationv1.updatebucketconfigparams.html" class="tsd-kind-icon">Update<wbr>Bucket<wbr>Config<wbr>Params</a>
 								<ul>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
+										<a href="resourceconfigurationv1.updatebucketconfigparams.html#activity_tracking" class="tsd-kind-icon">activity_<wbr>tracking</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-interface">
 										<a href="resourceconfigurationv1.updatebucketconfigparams.html#bucket" class="tsd-kind-icon">bucket</a>
 									</li>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -198,6 +231,9 @@
 									</li>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
 										<a href="resourceconfigurationv1.updatebucketconfigparams.html#if_match" class="tsd-kind-icon">if_<wbr>match</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-interface">
+										<a href="resourceconfigurationv1.updatebucketconfigparams.html#return_response" class="tsd-kind-icon">return_<wbr>response</a>
 									</li>
 								</ul>
 							</li>
@@ -235,7 +271,7 @@
 								<a href="../classes/resourceconfigurationv1.html#getbucketconfig" class="tsd-kind-icon">get<wbr>Bucket<wbr>Config</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="../classes/resourceconfigurationv1.html#getcredentials" class="tsd-kind-icon">get<wbr>Credentials</a>
+								<a href="../classes/resourceconfigurationv1.html#getservicecredentials" class="tsd-kind-icon">get<wbr>Service<wbr>Credentials</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="../classes/resourceconfigurationv1.html#preauthenticate" class="tsd-kind-icon">pre<wbr>Authenticate</a>

@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>A filter that controls access based on the network where request originated. Requests not originating from IP addresses listed in the <code>allowed_ip</code> field will be denied.  Viewing or updating the <code>Firewall</code> element requires the requester to have the <code>manager</code> role.</p>
+						<p>An access control mechanism based on the network (IP address) where request originated. Requests not originating from IP addresses listed in the <code>allowed_ip</code> field will be denied regardless of any access policies (including public access) that might otherwise permit the request.  Viewing or updating the <code>Firewall</code> element requires the requester to have the <code>manager</code> role.</p>
 					</div>
 				</div>
 			</section>
@@ -103,7 +103,7 @@
 					<div class="tsd-signature tsd-kind-icon">allowed_<wbr>ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/f310e57/resource-configuration/v1.ts#L239">v1.ts:239</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L277">v1.ts:277</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -129,6 +129,9 @@
 					<li class="current tsd-kind-class">
 						<a href="../classes/resourceconfigurationv1.html" class="tsd-kind-icon">Resource<wbr>Configuration<wbr>V1</a>
 						<ul>
+							<li class=" tsd-kind-interface tsd-parent-kind-class">
+								<a href="resourceconfigurationv1.activitytracking.html" class="tsd-kind-icon">Activity<wbr>Tracking</a>
+							</li>
 							<li class=" tsd-kind-interface tsd-parent-kind-class">
 								<a href="resourceconfigurationv1.bucket.html" class="tsd-kind-icon">Bucket</a>
 							</li>
@@ -183,7 +186,7 @@
 								<a href="../classes/resourceconfigurationv1.html#getbucketconfig" class="tsd-kind-icon">get<wbr>Bucket<wbr>Config</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="../classes/resourceconfigurationv1.html#getcredentials" class="tsd-kind-icon">get<wbr>Credentials</a>
+								<a href="../classes/resourceconfigurationv1.html#getservicecredentials" class="tsd-kind-icon">get<wbr>Service<wbr>Credentials</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="../classes/resourceconfigurationv1.html#preauthenticate" class="tsd-kind-icon">pre<wbr>Authenticate</a>
