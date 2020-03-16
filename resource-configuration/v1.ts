@@ -123,6 +123,8 @@ class ResourceConfigurationV1 extends BaseService {
    * @param {ActivityTracking} [params.activity_tracking] - Enables sending log data to Activity Tracker and LogDNA to
    * provide visibility into object read and write events. All object events are sent to the activity tracker instance
    * defined in the `activity_tracker_crn` field.
+   * @param {MetricsMonitoring} [params.metrics_monitoring] - Enables sending metrics to IBM Cloud Monitoring. All
+   * metrics are sent to the IBM Cloud Monitoring instance defined in the `monitoring_crn` field.
    * @param {string} [params.if_match] - An Etag previously returned in a header when fetching or updating a bucket's
    * metadata. If this value does not match the active Etag, the request will fail.
    * @param {Object} [params.headers] - Custom request headers
@@ -149,7 +151,8 @@ class ResourceConfigurationV1 extends BaseService {
 
     const body = {
       'firewall': _params.firewall,
-      'activity_tracking': _params.activity_tracking
+      'activity_tracking': _params.activity_tracking,
+      'metrics_monitoring': _params.metrics_monitoring
     };
 
     const path = {
@@ -227,6 +230,8 @@ namespace ResourceConfigurationV1 {
     firewall?: Firewall;
     /** Enables sending log data to Activity Tracker and LogDNA to provide visibility into object read and write events. All object events are sent to the activity tracker instance defined in the `activity_tracker_crn` field. */
     activity_tracking?: ActivityTracking;
+    /** Enables sending metrics to IBM Cloud Monitoring. All metrics are sent to the IBM Cloud Monitoring instance defined in the `monitoring_crn` field. */
+    metrics_monitoring?: MetricsMonitoring;
     /** An Etag previously returned in a header when fetching or updating a bucket's metadata. If this value does not match the active Etag, the request will fail. */
     if_match?: string;
     headers?: Object;
@@ -269,12 +274,22 @@ namespace ResourceConfigurationV1 {
     firewall?: Firewall;
     /** Enables sending log data to Activity Tracker and LogDNA to provide visibility into object read and write events. All object events are sent to the activity tracker instance defined in the `activity_tracker_crn` field. */
     activity_tracking?: ActivityTracking;
+    /** Enables sending metrics to IBM Cloud Monitoring. All metrics are sent to the IBM Cloud Monitoring instance defined in the `monitoring_crn` field. */
+    metrics_monitoring?: MetricsMonitoring;
   }
 
   /** An access control mechanism based on the network (IP address) where request originated. Requests not originating from IP addresses listed in the `allowed_ip` field will be denied regardless of any access policies (including public access) that might otherwise permit the request.  Viewing or updating the `Firewall` element requires the requester to have the `manager` role. */
   export interface Firewall {
     /** List of IPv4 or IPv6 addresses in CIDR notation to be affected by firewall in CIDR notation is supported. Passing an empty array will lift the IP address filter.  The `allowed_ip` array can contain a maximum of 1000 items. */
     allowed_ip?: string[];
+  }
+
+  /** Enables sending metrics to IBM Cloud Monitoring. All metrics are sent to the IBM Cloud Monitoring instance defined in the `monitoring_crn` field. */
+  export interface MetricsMonitoring {
+    /** If set to `true`, all usage metrics (i.e. `bytes_used`) will be sent to the monitoring service. */
+    usage_metrics_enabled?: boolean;
+    /** Required the first time `metrics_monitoring` is configured. The instance of IBM Cloud Monitoring that will receive the bucket metrics. The format is "crn:v1:bluemix:public:logdnaat:{bucket location}:a/{storage account}:{monitoring service instance}::". */
+    metrics_monitoring_crn?: string;
   }
 
 }
