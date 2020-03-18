@@ -93,6 +93,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.bucket.html#bytes_used" class="tsd-kind-icon">bytes_<wbr>used</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.bucket.html#crn" class="tsd-kind-icon">crn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.bucket.html#firewall" class="tsd-kind-icon">firewall</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.bucket.html#metrics_monitoring" class="tsd-kind-icon">metrics_<wbr>monitoring</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.bucket.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.bucket.html#object_count" class="tsd-kind-icon">object_<wbr>count</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.bucket.html#service_instance_crn" class="tsd-kind-icon">service_<wbr>instance_<wbr>crn</a></li>
@@ -112,7 +113,7 @@
 					<div class="tsd-signature tsd-kind-icon">activity_<wbr>tracking<span class="tsd-signature-symbol">:</span> <a href="resourceconfigurationv1.activitytracking.html" class="tsd-signature-type">ActivityTracking</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L271">v1.ts:271</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L276">v1.ts:276</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -127,7 +128,7 @@
 					<div class="tsd-signature tsd-kind-icon">bytes_<wbr>used<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L267">v1.ts:267</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L272">v1.ts:272</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -142,7 +143,7 @@
 					<div class="tsd-signature tsd-kind-icon">crn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L255">v1.ts:255</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L260">v1.ts:260</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,7 +158,7 @@
 					<div class="tsd-signature tsd-kind-icon">firewall<span class="tsd-signature-symbol">:</span> <a href="resourceconfigurationv1.firewall.html" class="tsd-signature-type">Firewall</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L269">v1.ts:269</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L274">v1.ts:274</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -167,12 +168,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="metrics_monitoring" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> metrics_<wbr>monitoring</h3>
+					<div class="tsd-signature tsd-kind-icon">metrics_<wbr>monitoring<span class="tsd-signature-symbol">:</span> <a href="resourceconfigurationv1.metricsmonitoring.html" class="tsd-signature-type">MetricsMonitoring</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L278">v1.ts:278</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Enables sending metrics to IBM Cloud Monitoring. All metrics are sent to the IBM Cloud Monitoring instance defined in the <code>monitoring_crn</code> field.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L253">v1.ts:253</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L258">v1.ts:258</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -187,7 +203,7 @@
 					<div class="tsd-signature tsd-kind-icon">object_<wbr>count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L265">v1.ts:265</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L270">v1.ts:270</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -202,7 +218,7 @@
 					<div class="tsd-signature tsd-kind-icon">service_<wbr>instance_<wbr>crn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L259">v1.ts:259</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L264">v1.ts:264</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -217,7 +233,7 @@
 					<div class="tsd-signature tsd-kind-icon">service_<wbr>instance_<wbr>id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L257">v1.ts:257</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L262">v1.ts:262</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -232,7 +248,7 @@
 					<div class="tsd-signature tsd-kind-icon">time_<wbr>created<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L261">v1.ts:261</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L266">v1.ts:266</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -247,7 +263,7 @@
 					<div class="tsd-signature tsd-kind-icon">time_<wbr>updated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/9ed9708/resource-configuration/v1.ts#L263">v1.ts:263</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L268">v1.ts:268</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -292,6 +308,9 @@
 										<a href="resourceconfigurationv1.bucket.html#firewall" class="tsd-kind-icon">firewall</a>
 									</li>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
+										<a href="resourceconfigurationv1.bucket.html#metrics_monitoring" class="tsd-kind-icon">metrics_<wbr>monitoring</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-interface">
 										<a href="resourceconfigurationv1.bucket.html#name" class="tsd-kind-icon">name</a>
 									</li>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -321,6 +340,9 @@
 								<a href="resourceconfigurationv1.getbucketconfigparams.html" class="tsd-kind-icon">Get<wbr>Bucket<wbr>Config<wbr>Params</a>
 							</li>
 							<li class=" tsd-kind-interface tsd-parent-kind-class">
+								<a href="resourceconfigurationv1.metricsmonitoring.html" class="tsd-kind-icon">Metrics<wbr>Monitoring</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-class">
 								<a href="resourceconfigurationv1.updatebucketconfigparams.html" class="tsd-kind-icon">Update<wbr>Bucket<wbr>Config<wbr>Params</a>
 							</li>
 							<li class=" tsd-kind-type-alias tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
@@ -329,41 +351,20 @@
 							<li class=" tsd-kind-type-alias tsd-parent-kind-class tsd-is-static">
 								<a href="../classes/resourceconfigurationv1.html#options" class="tsd-kind-icon">Options</a>
 							</li>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="../classes/resourceconfigurationv1.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="../classes/resourceconfigurationv1.html#_options" class="tsd-kind-icon">_options</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="../classes/resourceconfigurationv1.html#name" class="tsd-kind-icon">name</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="../classes/resourceconfigurationv1.html#servicedefaults" class="tsd-kind-icon">service<wbr>Defaults</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="../classes/resourceconfigurationv1.html#serviceversion" class="tsd-kind-icon">service<wbr>Version</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="../classes/resourceconfigurationv1.html#tokenmanager" class="tsd-kind-icon">token<wbr>Manager</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="../classes/resourceconfigurationv1.html#url-1" class="tsd-kind-icon">URL</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="../classes/resourceconfigurationv1.html#createrequest" class="tsd-kind-icon">create<wbr>Request</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="../classes/resourceconfigurationv1.html#getbucketconfig" class="tsd-kind-icon">get<wbr>Bucket<wbr>Config</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="../classes/resourceconfigurationv1.html#getservicecredentials" class="tsd-kind-icon">get<wbr>Service<wbr>Credentials</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="../classes/resourceconfigurationv1.html#preauthenticate" class="tsd-kind-icon">pre<wbr>Authenticate</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="../classes/resourceconfigurationv1.html#setaccesstoken" class="tsd-kind-icon">set<wbr>Access<wbr>Token</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="../classes/resourceconfigurationv1.html#updatebucketconfig" class="tsd-kind-icon">update<wbr>Bucket<wbr>Config</a>
