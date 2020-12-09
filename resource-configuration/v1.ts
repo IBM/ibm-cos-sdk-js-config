@@ -20,7 +20,7 @@ import { BaseService, getMissingParams } from 'ibm-cloud-sdk-core';
 import { getSdkHeaders } from '../lib/common';
 
 /**
- * REST API used to configure Cloud Object Storage buckets.  This version of the API only supports reading bucket metadata and setting IP access controls.
+ * REST API used to configure Cloud Object Storage buckets.  This version of the API only supports reading bucket metadata, setting IP access controls, and configuring logging and monitoring services.
  */
 
 class ResourceConfigurationV1 extends BaseService {
@@ -248,7 +248,7 @@ namespace ResourceConfigurationV1 {
     read_data_events?: boolean;
     /** If set to `true`, all object write events (i.e. uploads) will be sent to Activity Tracker. */
     write_data_events?: boolean;
-    /** Required the first time `activity_tracking` is configured. The instance of Activity Tracker that will recieve object event data. The format is "crn:v1:bluemix:public:logdnaat:{bucket location}:a/{storage account}:{activity tracker service instance}::". */
+    /** Required the first time `activity_tracking` is configured. The instance of Activity Tracker that will receive object event data. The format is "crn:v1:bluemix:public:logdnaat:{bucket location}:a/{storage account}:{activity tracker service instance}::". */
     activity_tracker_crn?: string;
   }
 
@@ -282,6 +282,10 @@ namespace ResourceConfigurationV1 {
   export interface Firewall {
     /** List of IPv4 or IPv6 addresses in CIDR notation to be affected by firewall in CIDR notation is supported. Passing an empty array will lift the IP address filter.  The `allowed_ip` array can contain a maximum of 1000 items. */
     allowed_ip?: string[];
+    /** List of IPv4 or IPv6 addresses in CIDR notation to be affected by firewall in CIDR notation is supported. Passing an empty array will lift the IP address filter.  The `denied_ip` array can contain a maximum of 1000 items. */
+    denied_ip?: string[];
+    /** Indicates which network types are allowed for bucket access. May contain `public`, `private`, and/or `direct` elements. Setting `allowed_network_type` to only `private` will prevent access to object storage from outside of the IBM Cloud.  The entire array will be overwritten in a `PATCH` operation. For more information on network types, [see the documentation](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#advanced-endpoint-types). */
+    allowed_network_type?: string[];
   }
 
   /** Enables sending metrics to IBM Cloud Monitoring. All metrics are sent to the IBM Cloud Monitoring instance defined in the `monitoring_crn` field. */

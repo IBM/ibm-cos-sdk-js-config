@@ -161,11 +161,13 @@ describe('updateBucketConfig', () => {
       const bucket = 'fake_bucket';
       const firewall = 'fake_firewall';
       const activity_tracking = 'fake_activity_tracking';
+      const metrics_monitoring = 'fake_metrics_monitoring';
       const if_match = 'fake_if_match';
       const params = {
         bucket,
         firewall,
         activity_tracking,
+        metrics_monitoring,
         if_match,
       };
 
@@ -185,6 +187,7 @@ describe('updateBucketConfig', () => {
       checkUserHeader(createRequestMock, 'if-match', if_match);
       expect(options.body['firewall']).toEqual(firewall);
       expect(options.body['activity_tracking']).toEqual(activity_tracking);
+      expect(options.body['metrics_monitoring']).toEqual(metrics_monitoring);
       expect(options.path['bucket']).toEqual(bucket);
     });
 

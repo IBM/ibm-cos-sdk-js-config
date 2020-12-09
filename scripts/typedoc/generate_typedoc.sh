@@ -2,4 +2,4 @@
     --out ./doc/latest ./resource-configuration/v1.ts \
     --target "ES5" \
     --ignoreCompilerErrors
-    
+

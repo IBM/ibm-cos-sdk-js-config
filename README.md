@@ -1,7 +1,10 @@
-# IBM COS Resource Configuration SDK for Node.js 
+# IBM COS Resource Configuration SDK for Node.js
 
-This package allows Javascript developers to write software that interacts with the Resource Configuration API for [IBM
-Cloud Object Storage](https://cloud.ibm.com/apidocs/cos/cos-configuration).
+This package allows Javascript developers to write software that interacts with the Resource Configuration API for [IBM Cloud Object Storage](https://cloud.ibm.com/apidocs/cos/cos-configuration).
+
+## Notice
+
+IBM has added a [Language Support Policy](#language-support-policy). Language versions will be deprecated on the published schedule without additional notice.
 
 ## Documentation
 
@@ -14,11 +17,12 @@ For release notes, see the [CHANGELOG](CHANGELOG.md).
 ## Quick start
 
 You'll need:
-  * An instance of COS.
-  * An API key from [IBM Cloud Identity and Access Management](https://cloud.ibm.com/docs/iam/users_roles.html).
-  * **Node 8.0++**.
+
+* An instance of COS.
+* An API key from [IBM Cloud Identity and Access Management](https://cloud.ibm.com/docs/iam/users_roles.html).
 
 ## Getting the SDK
+
 The preferred way to install the IBM COS Resource Configuration SDK for Node.js is to use the
 [npm](http://npmjs.org) package manager for Node.js. Simply type the following
 into a terminal window:
@@ -28,6 +32,7 @@ npm install ibm-cos-sdk-config
 ```
 
 ## Getting Help
+
 Feel free to use GitHub issues for tracking bugs and feature requests, but for help please use one of the following resources:
 
 * Read a quick start guide in [IBM Cloud Docs](https://cloud.ibm.com/docs/services/cloud-object-storage/).
@@ -35,6 +40,9 @@ Feel free to use GitHub issues for tracking bugs and feature requests, but for h
 * Open a support ticket with [IBM Cloud Support](https://cloud.ibm.com/unifiedsupport/supportcenter)
 * If it turns out that you may have found a bug, please [open an issue](https://github.com/ibm/ibm-cos-sdk-js-config/issues/new).
 
+## Language Support Policy
+
+IBM supports [current LTS releases](https://nodejs.org/en/about/releases/). IBM will deprecate language versions 90 days after a version reaches end-of-life. All clients will need to upgrade to a supported version before the end of the grace period.
 
 ## License
 
