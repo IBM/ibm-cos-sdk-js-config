@@ -67,13 +67,6 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Enables sending log data to Activity Tracker and LogDNA to provide visibility into object read and write events. All object events are sent to the activity tracker instance defined in the <code>activity_tracker_crn</code> field.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -105,14 +98,9 @@
 					<div class="tsd-signature tsd-kind-icon">activity_<wbr>tracker_<wbr>crn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L252">v1.ts:252</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/141a8a2/resource-configuration/v1.ts#L252">v1.ts:252</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Required the first time <code>activity_tracking</code> is configured. The instance of Activity Tracker that will recieve object event data. The format is &quot;crn:v1:bluemix:public:logdnaat:{bucket location}:a/{storage account}:{activity tracker service instance}::&quot;.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="read_data_events" class="tsd-anchor"></a>
@@ -120,14 +108,9 @@
 					<div class="tsd-signature tsd-kind-icon">read_<wbr>data_<wbr>events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L248">v1.ts:248</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/141a8a2/resource-configuration/v1.ts#L248">v1.ts:248</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>If set to <code>true</code>, all object read events (i.e. downloads) will be sent to Activity Tracker.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="write_data_events" class="tsd-anchor"></a>
@@ -135,14 +118,9 @@
 					<div class="tsd-signature tsd-kind-icon">write_<wbr>data_<wbr>events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/e7d4be9/resource-configuration/v1.ts#L250">v1.ts:250</a></li>
+							<li>Defined in <a href="https://github.ibm.com/cs-developer-enablement/ibm-cos-sdk-js-config/blob/141a8a2/resource-configuration/v1.ts#L250">v1.ts:250</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>If set to <code>true</code>, all object write events (i.e. uploads) will be sent to Activity Tracker.</p>
-						</div>
-					</div>
 				</section>
 			</section>
 		</div>
@@ -199,20 +177,41 @@
 							<li class=" tsd-kind-type-alias tsd-parent-kind-class tsd-is-static">
 								<a href="../classes/resourceconfigurationv1.html#options" class="tsd-kind-icon">Options</a>
 							</li>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="../classes/resourceconfigurationv1.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="../classes/resourceconfigurationv1.html#_options" class="tsd-kind-icon">_options</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="../classes/resourceconfigurationv1.html#name" class="tsd-kind-icon">name</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="../classes/resourceconfigurationv1.html#servicedefaults" class="tsd-kind-icon">service<wbr>Defaults</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="../classes/resourceconfigurationv1.html#serviceversion" class="tsd-kind-icon">service<wbr>Version</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="../classes/resourceconfigurationv1.html#tokenmanager" class="tsd-kind-icon">token<wbr>Manager</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
 								<a href="../classes/resourceconfigurationv1.html#url-1" class="tsd-kind-icon">URL</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="../classes/resourceconfigurationv1.html#createrequest" class="tsd-kind-icon">create<wbr>Request</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="../classes/resourceconfigurationv1.html#getbucketconfig" class="tsd-kind-icon">get<wbr>Bucket<wbr>Config</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="../classes/resourceconfigurationv1.html#getservicecredentials" class="tsd-kind-icon">get<wbr>Service<wbr>Credentials</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="../classes/resourceconfigurationv1.html#preauthenticate" class="tsd-kind-icon">pre<wbr>Authenticate</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="../classes/resourceconfigurationv1.html#setaccesstoken" class="tsd-kind-icon">set<wbr>Access<wbr>Token</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="../classes/resourceconfigurationv1.html#updatebucketconfig" class="tsd-kind-icon">update<wbr>Bucket<wbr>Config</a>
