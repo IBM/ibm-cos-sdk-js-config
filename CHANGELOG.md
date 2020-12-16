@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 1.3.0
+## 1.3.1
 
 ### Content
 
@@ -11,6 +11,11 @@
 #### Defect Fixes
 
 * Add language support policy
+* Bump minimum dependency versions
+
+## 1.3.0
+
+* Deprecated
 
 ## 1.2.0
 
