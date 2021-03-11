@@ -125,6 +125,7 @@ class ResourceConfigurationV1 extends BaseService {
    * defined in the `activity_tracker_crn` field.
    * @param {MetricsMonitoring} [params.metrics_monitoring] - Enables sending metrics to IBM Cloud Monitoring. All
    * metrics are sent to the IBM Cloud Monitoring instance defined in the `monitoring_crn` field.
+   * @param {number} [params.hard_quota] - Maximum bytes for this bucket.
    * @param {string} [params.if_match] - An Etag previously returned in a header when fetching or updating a bucket's
    * metadata. If this value does not match the active Etag, the request will fail.
    * @param {Object} [params.headers] - Custom request headers
@@ -152,7 +153,8 @@ class ResourceConfigurationV1 extends BaseService {
     const body = {
       'firewall': _params.firewall,
       'activity_tracking': _params.activity_tracking,
-      'metrics_monitoring': _params.metrics_monitoring
+      'metrics_monitoring': _params.metrics_monitoring,
+      'hard_quota': _params.hard_quota
     };
 
     const path = {
@@ -232,6 +234,8 @@ namespace ResourceConfigurationV1 {
     activity_tracking?: ActivityTracking;
     /** Enables sending metrics to IBM Cloud Monitoring. All metrics are sent to the IBM Cloud Monitoring instance defined in the `monitoring_crn` field. */
     metrics_monitoring?: MetricsMonitoring;
+    /** Maximum bytes for this bucket. */
+    hard_quota?: number;
     /** An Etag previously returned in a header when fetching or updating a bucket's metadata. If this value does not match the active Etag, the request will fail. */
     if_match?: string;
     headers?: Object;
@@ -270,6 +274,14 @@ namespace ResourceConfigurationV1 {
     object_count?: number;
     /** Total size of all objects in the bucket. Non-mutable. */
     bytes_used?: number;
+    /** Number of non-current object versions in the bucket. Non-mutable. */
+    noncurrent_object_count?: number;
+    /** Total size of all non-current object versions in the bucket. Non-mutable. */
+    noncurrent_bytes_used?: number;
+    /** Total number of delete markers in the bucket. Non-mutable. */
+    delete_marker_count?: number;
+    /** Maximum bytes for this bucket. */
+    hard_quota?: number;
     /** An access control mechanism based on the network (IP address) where request originated. Requests not originating from IP addresses listed in the `allowed_ip` field will be denied regardless of any access policies (including public access) that might otherwise permit the request.  Viewing or updating the `Firewall` element requires the requester to have the `manager` role. */
     firewall?: Firewall;
     /** Enables sending log data to Activity Tracker and LogDNA to provide visibility into object read and write events. All object events are sent to the activity tracker instance defined in the `activity_tracker_crn` field. */
@@ -292,6 +304,8 @@ namespace ResourceConfigurationV1 {
   export interface MetricsMonitoring {
     /** If set to `true`, all usage metrics (i.e. `bytes_used`) will be sent to the monitoring service. */
     usage_metrics_enabled?: boolean;
+    /** If set to `true`, all request metrics (i.e. `rest.object.head`) will be sent to the monitoring service. */
+    request_metrics_enabled?: boolean;
     /** Required the first time `metrics_monitoring` is configured. The instance of IBM Cloud Monitoring that will receive the bucket metrics. The format is "crn:v1:bluemix:public:logdnaat:{bucket location}:a/{storage account}:{monitoring service instance}::". */
     metrics_monitoring_crn?: string;
   }

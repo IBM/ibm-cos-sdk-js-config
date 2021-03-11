@@ -162,12 +162,14 @@ describe('updateBucketConfig', () => {
       const firewall = 'fake_firewall';
       const activity_tracking = 'fake_activity_tracking';
       const metrics_monitoring = 'fake_metrics_monitoring';
+      const hard_quota = 'fake_hard_quota';
       const if_match = 'fake_if_match';
       const params = {
         bucket,
         firewall,
         activity_tracking,
         metrics_monitoring,
+        hard_quota,
         if_match,
       };
 
@@ -188,6 +190,7 @@ describe('updateBucketConfig', () => {
       expect(options.body['firewall']).toEqual(firewall);
       expect(options.body['activity_tracking']).toEqual(activity_tracking);
       expect(options.body['metrics_monitoring']).toEqual(metrics_monitoring);
+      expect(options.body['hard_quota']).toEqual(hard_quota);
       expect(options.path['bucket']).toEqual(bucket);
     });
 
