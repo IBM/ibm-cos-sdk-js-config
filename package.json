@@ -1,6 +1,6 @@
 {
   "name": "ibm-cos-sdk-config",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "IBM SDK for JavaScript",
   "main": "index.js",
   "scripts": {
@@ -27,18 +27,18 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/IBM/ibm-cos-sdk-js-config",
   "dependencies": {
-    "@types/is-stream": "~1.1.0",
-    "@types/node": "~10.3.5",
-    "ibm-cloud-sdk-core": "^0.2.8"
+    "@types/is-stream": "^1.1.0",
+    "@types/node": "^10.17.60",
+    "ibm-cloud-sdk-core": "^0.2.10"
   },
   "devDependencies": {
-    "@types/request": "^2.48.1",
-    "browserify": "^16.2.3",
-    "tslint": "^5.13.1",
-    "tslint-config-prettier": "^1.13.0",
+    "@types/request": "^2.48.7",
+    "browserify": "^16.5.2",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-eslint-rules": "^5.4.0",
     "typedoc": "^0.14.2",
-    "uglify-es": "~3.3.9"
+    "uglify-es": "^3.3.9"
   },
   "lint-staged": {
     "**/*.ts": [

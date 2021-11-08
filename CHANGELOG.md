@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.4.1
+
+### Content
+
+#### Defect Fixes
+
+* Support for NodeJS 16
+* Update dependencies
+
 ## 1.4.0
 
 ### Content
