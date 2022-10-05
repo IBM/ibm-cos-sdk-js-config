@@ -64,6 +64,15 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>REST API used to configure Cloud Object Storage buckets.
+						interfaces</p>
+					</div>
+					<p>API Version: 1.0.0</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -86,10 +95,12 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface tsd-parent-kind-class"><a href="../interfaces/resourceconfigurationv1.activitytracking.html" class="tsd-kind-icon">Activity<wbr>Tracking</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-class"><a href="../interfaces/resourceconfigurationv1.bucket.html" class="tsd-kind-icon">Bucket</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-class"><a href="../interfaces/resourceconfigurationv1.empty.html" class="tsd-kind-icon">Empty</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-class"><a href="../interfaces/resourceconfigurationv1.emptyobject.html" class="tsd-kind-icon">Empty<wbr>Object</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-class"><a href="../interfaces/resourceconfigurationv1.firewall.html" class="tsd-kind-icon">Firewall</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-class"><a href="../interfaces/resourceconfigurationv1.getbucketconfigparams.html" class="tsd-kind-icon">Get<wbr>Bucket<wbr>Config<wbr>Params</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-class"><a href="../interfaces/resourceconfigurationv1.jsonobject.html" class="tsd-kind-icon">Json<wbr>Object</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-class"><a href="../interfaces/resourceconfigurationv1.metricsmonitoring.html" class="tsd-kind-icon">Metrics<wbr>Monitoring</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-class tsd-has-type-parameter"><a href="../interfaces/resourceconfigurationv1.response.html" class="tsd-kind-icon">Response</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-class"><a href="../interfaces/resourceconfigurationv1.updatebucketconfigparams.html" class="tsd-kind-icon">Update<wbr>Bucket<wbr>Config<wbr>Params</a></li>
 							</ul>
 						</section>
@@ -97,7 +108,6 @@
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-class tsd-has-type-parameter tsd-is-static"><a href="resourceconfigurationv1.html#callback" class="tsd-kind-icon">Callback</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-class tsd-is-static"><a href="resourceconfigurationv1.html#options" class="tsd-kind-icon">Options</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -109,23 +119,23 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="resourceconfigurationv1.html#_options" class="tsd-kind-icon">_options</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="resourceconfigurationv1.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="resourceconfigurationv1.html#servicedefaults" class="tsd-kind-icon">service<wbr>Defaults</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="resourceconfigurationv1.html#serviceversion" class="tsd-kind-icon">service<wbr>Version</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="resourceconfigurationv1.html#tokenmanager" class="tsd-kind-icon">token<wbr>Manager</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static"><a href="resourceconfigurationv1.html#url-1" class="tsd-kind-icon">URL</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static"><a href="resourceconfigurationv1.html#default_service_name" class="tsd-kind-icon">DEFAULT_<wbr>SERVICE_<wbr>NAME</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static"><a href="resourceconfigurationv1.html#default_service_url" class="tsd-kind-icon">DEFAULT_<wbr>SERVICE_<wbr>URL</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="resourceconfigurationv1.html#createrequest" class="tsd-kind-icon">create<wbr>Request</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="resourceconfigurationv1.html#disableretries" class="tsd-kind-icon">disable<wbr>Retries</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="resourceconfigurationv1.html#enableretries" class="tsd-kind-icon">enable<wbr>Retries</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="resourceconfigurationv1.html#getauthenticator" class="tsd-kind-icon">get<wbr>Authenticator</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resourceconfigurationv1.html#getbucketconfig" class="tsd-kind-icon">get<wbr>Bucket<wbr>Config</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="resourceconfigurationv1.html#getservicecredentials" class="tsd-kind-icon">get<wbr>Service<wbr>Credentials</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="resourceconfigurationv1.html#preauthenticate" class="tsd-kind-icon">pre<wbr>Authenticate</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="resourceconfigurationv1.html#setaccesstoken" class="tsd-kind-icon">set<wbr>Access<wbr>Token</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="resourceconfigurationv1.html#gethttpclient" class="tsd-kind-icon">get<wbr>Http<wbr>Client</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="resourceconfigurationv1.html#setdefaultheaders" class="tsd-kind-icon">set<wbr>Default<wbr>Headers</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="resourceconfigurationv1.html#setenablegzipcompression" class="tsd-kind-icon">set<wbr>Enable<wbr>Gzip<wbr>Compression</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="resourceconfigurationv1.html#setserviceurl" class="tsd-kind-icon">set<wbr>Service<wbr>Url</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resourceconfigurationv1.html#updatebucketconfig" class="tsd-kind-icon">update<wbr>Bucket<wbr>Config</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="resourceconfigurationv1.html#newinstance" class="tsd-kind-icon">new<wbr>Instance</a></li>
 							</ul>
 						</section>
 					</div>
@@ -139,15 +149,20 @@
 					<div class="tsd-signature tsd-kind-icon">Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/2e4b709/resource-configuration/v1.ts#L210">v1.ts:210</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/7dec83a/resource-configuration/v1.ts#L244">resource-configuration/v1.ts:244</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The callback for a service request.</p>
+						</div>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, response<span class="tsd-signature-symbol">?: </span><a href="../interfaces/resourceconfigurationv1.response.html" class="tsd-signature-type">Response</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -157,60 +172,12 @@
 												<h5>error: <span class="tsd-signature-type">any</span></h5>
 											</li>
 											<li>
-												<h5><span class="tsd-flag ts-flagOptional">Optional</span> body: <span class="tsd-signature-type">T</span></h5>
-											</li>
-											<li>
-												<h5><span class="tsd-flag ts-flagOptional">Optional</span> response: <span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> response: <a href="../interfaces/resourceconfigurationv1.response.html" class="tsd-signature-type">Response</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 									</li>
 								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-class tsd-is-static">
-					<a name="options" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> Options</h3>
-					<div class="tsd-signature tsd-kind-icon">Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/2e4b709/resource-configuration/v1.ts#L196">v1.ts:196</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> iam_<wbr>access_<wbr>token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> iam_<wbr>apikey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> iam_<wbr>client_<wbr>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> iam_<wbr>client_<wbr>secret<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> iam_<wbr>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> use_<wbr>unauthenticated<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 							</li>
 						</ul>
 					</div>
@@ -222,20 +189,30 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Resource<wbr>Configuration<wbr>V1<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="resourceconfigurationv1.html#options" class="tsd-signature-type">Options</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resourceconfigurationv1.html" class="tsd-signature-type">ResourceConfigurationV1</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Resource<wbr>Configuration<wbr>V1<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UserOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resourceconfigurationv1.html" class="tsd-signature-type">ResourceConfigurationV1</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides BaseService.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/2e4b709/resource-configuration/v1.ts#L30">v1.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/7dec83a/resource-configuration/v1.ts#L72">resource-configuration/v1.ts:72</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Construct a ResourceConfigurationV1 object.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <a href="resourceconfigurationv1.html#options" class="tsd-signature-type">Options</a></h5>
+									<h5>options: <span class="tsd-signature-type">UserOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Options for the service.</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="resourceconfigurationv1.html" class="tsd-signature-type">ResourceConfigurationV1</a></h4>
@@ -245,98 +222,105 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-					<a name="_options" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _options</h3>
-					<div class="tsd-signature tsd-kind-icon">_options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BaseServiceOptions</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
+					<a name="default_service_name" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>SERVICE_<wbr>NAME</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>SERVICE_<wbr>NAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;resource_configuration&quot;</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from BaseService._options</p>
+						<p>Overrides BaseService.DEFAULT_SERVICE_NAME</p>
 						<ul>
-							<li>Defined in ibm-cos-sdk-js-config/node_modules/ibm-cloud-sdk-core/lib/base_service.d.ts:54</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
-					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Overrides BaseService.name</p>
-						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/2e4b709/resource-configuration/v1.ts#L29">v1.ts:29</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-					<a name="servicedefaults" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> service<wbr>Defaults</h3>
-					<div class="tsd-signature tsd-kind-icon">service<wbr>Defaults<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from BaseService.serviceDefaults</p>
-						<ul>
-							<li>Defined in ibm-cos-sdk-js-config/node_modules/ibm-cloud-sdk-core/lib/base_service.d.ts:55</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
-					<a name="serviceversion" class="tsd-anchor"></a>
-					<h3>service<wbr>Version</h3>
-					<div class="tsd-signature tsd-kind-icon">service<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Overrides BaseService.serviceVersion</p>
-						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/2e4b709/resource-configuration/v1.ts#L30">v1.ts:30</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-					<a name="tokenmanager" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> token<wbr>Manager</h3>
-					<div class="tsd-signature tsd-kind-icon">token<wbr>Manager<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from BaseService.tokenManager</p>
-						<ul>
-							<li>Defined in ibm-cos-sdk-js-config/node_modules/ibm-cloud-sdk-core/lib/base_service.d.ts:56</li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/7dec83a/resource-configuration/v1.ts#L41">resource-configuration/v1.ts:41</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
-					<a name="url-1" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> URL</h3>
-					<div class="tsd-signature tsd-kind-icon">URL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;https://config.cloud-object-storage.cloud.ibm.com/v1&quot;</span></div>
+					<a name="default_service_url" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> DEFAULT_<wbr>SERVICE_<wbr>URL</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>SERVICE_<wbr>URL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;https://config.cloud-object-storage.cloud.ibm.com/v1&quot;</span></div>
 					<aside class="tsd-sources">
-						<p>Overrides BaseService.URL</p>
+						<p>Overrides BaseService.DEFAULT_SERVICE_URL</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/2e4b709/resource-configuration/v1.ts#L28">v1.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/7dec83a/resource-configuration/v1.ts#L39">resource-configuration/v1.ts:39</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-					<a name="createrequest" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> create<wbr>Request</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Request<span class="tsd-signature-symbol">(</span>parameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="disableretries" class="tsd-anchor"></a>
+					<h3>disable<wbr>Retries</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">disable<wbr>Retries<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from BaseService.createRequest</p>
+								<p>Inherited from <a href="resourceconfigurationv1.html">ResourceConfigurationV1</a>.<a href="resourceconfigurationv1.html#disableretries">disableRetries</a></p>
 								<ul>
-									<li>Defined in ibm-cos-sdk-js-config/node_modules/ibm-cloud-sdk-core/lib/base_service.d.ts:119</li>
+									<li>Defined in node_modules/ibm-cloud-sdk-core/es/lib/base-service.d.ts:116</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Disables retries.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="enableretries" class="tsd-anchor"></a>
+					<h3>enable<wbr>Retries</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">enable<wbr>Retries<span class="tsd-signature-symbol">(</span>retryOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">RetryOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="resourceconfigurationv1.html">ResourceConfigurationV1</a>.<a href="resourceconfigurationv1.html#enableretries">enableRetries</a></p>
+								<ul>
+									<li>Defined in node_modules/ibm-cloud-sdk-core/es/lib/base-service.d.ts:112</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Enable retries for unfulfilled requests.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>parameters: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">any</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> retryOptions: <span class="tsd-signature-type">RetryOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>configuration for retries</p>
+									</div>
 								</li>
 							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getauthenticator" class="tsd-anchor"></a>
+					<h3>get<wbr>Authenticator</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Authenticator<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="resourceconfigurationv1.html">ResourceConfigurationV1</a>.<a href="resourceconfigurationv1.html#getauthenticator">getAuthenticator</a></p>
+								<ul>
+									<li>Defined in node_modules/ibm-cloud-sdk-core/es/lib/base-service.d.ts:83</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the instance of the authenticator set on the service.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
@@ -345,67 +329,84 @@
 					<a name="getbucketconfig" class="tsd-anchor"></a>
 					<h3>get<wbr>Bucket<wbr>Config</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Bucket<wbr>Config<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="../interfaces/resourceconfigurationv1.getbucketconfigparams.html" class="tsd-signature-type">GetBucketConfigParams</a>, callback<span class="tsd-signature-symbol">: </span><a href="resourceconfigurationv1.html#callback" class="tsd-signature-type">Callback</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/resourceconfigurationv1.bucket.html" class="tsd-signature-type">Bucket</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Bucket<wbr>Config<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="../interfaces/resourceconfigurationv1.getbucketconfigparams.html" class="tsd-signature-type">GetBucketConfigParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/resourceconfigurationv1.response.html" class="tsd-signature-type">Response</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/resourceconfigurationv1.bucket.html" class="tsd-signature-type">Bucket</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/2e4b709/resource-configuration/v1.ts#L67">v1.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/7dec83a/resource-configuration/v1.ts#L109">resource-configuration/v1.ts:109</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns metadata for the specified bucket.</p>
+								</div>
+								<p>Returns metadata for the specified bucket.</p>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>params: <a href="../interfaces/resourceconfigurationv1.getbucketconfigparams.html" class="tsd-signature-type">GetBucketConfigParams</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <a href="resourceconfigurationv1.html#callback" class="tsd-signature-type">Callback</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/resourceconfigurationv1.bucket.html" class="tsd-signature-type">Bucket</a><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The parameters to send to the service.</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">void</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/resourceconfigurationv1.response.html" class="tsd-signature-type">Response</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/resourceconfigurationv1.bucket.html" class="tsd-signature-type">Bucket</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a name="getservicecredentials" class="tsd-anchor"></a>
-					<h3>get<wbr>Service<wbr>Credentials</h3>
+					<a name="gethttpclient" class="tsd-anchor"></a>
+					<h3>get<wbr>Http<wbr>Client</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Service<wbr>Credentials<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Credentials</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Http<wbr>Client<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AxiosInstance</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from BaseService.getServiceCredentials</p>
+								<p>Inherited from <a href="resourceconfigurationv1.html">ResourceConfigurationV1</a>.<a href="resourceconfigurationv1.html#gethttpclient">getHttpClient</a></p>
 								<ul>
-									<li>Defined in ibm-cos-sdk-js-config/node_modules/ibm-cloud-sdk-core/lib/base_service.d.ts:86</li>
+									<li>Defined in node_modules/ibm-cloud-sdk-core/es/lib/base-service.d.ts:106</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Credentials</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the Axios instance set on the service.
+									All requests will be made using this instance.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AxiosInstance</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-					<a name="preauthenticate" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> pre<wbr>Authenticate</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">pre<wbr>Authenticate<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setdefaultheaders" class="tsd-anchor"></a>
+					<h3>set<wbr>Default<wbr>Headers</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Default<wbr>Headers<span class="tsd-signature-symbol">(</span>headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">OutgoingHttpHeaders</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from BaseService.preAuthenticate</p>
+								<p>Inherited from <a href="resourceconfigurationv1.html">ResourceConfigurationV1</a>.<a href="resourceconfigurationv1.html#setdefaultheaders">setDefaultHeaders</a></p>
 								<ul>
-									<li>Defined in ibm-cos-sdk-js-config/node_modules/ibm-cloud-sdk-core/lib/base_service.d.ts:109</li>
+									<li>Defined in node_modules/ibm-cloud-sdk-core/es/lib/base-service.d.ts:95</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set the HTTP headers to be sent in every request.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>callback: <span class="tsd-signature-type">any</span></h5>
+									<h5>headers: <span class="tsd-signature-type">OutgoingHttpHeaders</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The map of headers to include in requests.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -413,23 +414,63 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a name="setaccesstoken" class="tsd-anchor"></a>
-					<h3>set<wbr>Access<wbr>Token</h3>
+					<a name="setenablegzipcompression" class="tsd-anchor"></a>
+					<h3>set<wbr>Enable<wbr>Gzip<wbr>Compression</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Access<wbr>Token<span class="tsd-signature-symbol">(</span>iam_access_token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Enable<wbr>Gzip<wbr>Compression<span class="tsd-signature-symbol">(</span>setting<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from BaseService.setAccessToken</p>
+								<p>Inherited from <a href="resourceconfigurationv1.html">ResourceConfigurationV1</a>.<a href="resourceconfigurationv1.html#setenablegzipcompression">setEnableGzipCompression</a></p>
 								<ul>
-									<li>Defined in ibm-cos-sdk-js-config/node_modules/ibm-cloud-sdk-core/lib/base_service.d.ts:99</li>
+									<li>Defined in node_modules/ibm-cloud-sdk-core/es/lib/base-service.d.ts:101</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Turn request body compression on or off.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>iam_access_token: <span class="tsd-signature-type">string</span></h5>
+									<h5>setting: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Will turn it on if &#39;true&#39;, off if &#39;false&#39;.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setserviceurl" class="tsd-anchor"></a>
+					<h3>set<wbr>Service<wbr>Url</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Service<wbr>Url<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="resourceconfigurationv1.html">ResourceConfigurationV1</a>.<a href="resourceconfigurationv1.html#setserviceurl">setServiceUrl</a></p>
+								<ul>
+									<li>Defined in node_modules/ibm-cloud-sdk-core/es/lib/base-service.d.ts:89</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set the service URL to send requests to.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The base URL for the service.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -440,28 +481,64 @@
 					<a name="updatebucketconfig" class="tsd-anchor"></a>
 					<h3>update<wbr>Bucket<wbr>Config</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Bucket<wbr>Config<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="../interfaces/resourceconfigurationv1.updatebucketconfigparams.html" class="tsd-signature-type">UpdateBucketConfigParams</a>, callback<span class="tsd-signature-symbol">: </span><a href="resourceconfigurationv1.html#callback" class="tsd-signature-type">Callback</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/resourceconfigurationv1.empty.html" class="tsd-signature-type">Empty</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Bucket<wbr>Config<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="../interfaces/resourceconfigurationv1.updatebucketconfigparams.html" class="tsd-signature-type">UpdateBucketConfigParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/resourceconfigurationv1.response.html" class="tsd-signature-type">Response</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/resourceconfigurationv1.emptyobject.html" class="tsd-signature-type">EmptyObject</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/2e4b709/resource-configuration/v1.ts#L135">v1.ts:135</a></li>
+									<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/7dec83a/resource-configuration/v1.ts#L178">resource-configuration/v1.ts:178</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Make changes to a bucket&#39;s configuration.</p>
+								</div>
+								<p>Updates a bucket using <a href="https://tools.ietf.org/html/rfc7396">JSON Merge Patch</a>. This request is used to add
+									functionality (like an IP access filter) or to update existing parameters.  <strong>Primitives are overwritten and
+									replaced in their entirety. It is not possible to append a new (or to delete a specific) value to an array.</strong>
+									Arrays can be cleared by updating the parameter with an empty array <code>[]</code>. A <code>PATCH</code> operation only updates
+									specified mutable fields. Please don&#39;t use <code>PATCH</code> trying to update the number of objects in a bucket, any
+								timestamps, or other non-mutable fields.</p>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>params: <a href="../interfaces/resourceconfigurationv1.updatebucketconfigparams.html" class="tsd-signature-type">UpdateBucketConfigParams</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callback: <a href="resourceconfigurationv1.html#callback" class="tsd-signature-type">Callback</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/resourceconfigurationv1.empty.html" class="tsd-signature-type">Empty</a><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The parameters to send to the service.</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">void</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/resourceconfigurationv1.response.html" class="tsd-signature-type">Response</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/resourceconfigurationv1.emptyobject.html" class="tsd-signature-type">EmptyObject</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="newinstance" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> new<wbr>Instance</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">new<wbr>Instance<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UserOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resourceconfigurationv1.html" class="tsd-signature-type">ResourceConfigurationV1</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/7dec83a/resource-configuration/v1.ts#L57">resource-configuration/v1.ts:57</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructs an instance of ResourceConfigurationV1 with passed in options and external configuration.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <span class="tsd-signature-type">UserOptions</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="resourceconfigurationv1.html" class="tsd-signature-type">ResourceConfigurationV1</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -489,7 +566,7 @@
 								<a href="../interfaces/resourceconfigurationv1.bucket.html" class="tsd-kind-icon">Bucket</a>
 							</li>
 							<li class=" tsd-kind-interface tsd-parent-kind-class">
-								<a href="../interfaces/resourceconfigurationv1.empty.html" class="tsd-kind-icon">Empty</a>
+								<a href="../interfaces/resourceconfigurationv1.emptyobject.html" class="tsd-kind-icon">Empty<wbr>Object</a>
 							</li>
 							<li class=" tsd-kind-interface tsd-parent-kind-class">
 								<a href="../interfaces/resourceconfigurationv1.firewall.html" class="tsd-kind-icon">Firewall</a>
@@ -498,7 +575,13 @@
 								<a href="../interfaces/resourceconfigurationv1.getbucketconfigparams.html" class="tsd-kind-icon">Get<wbr>Bucket<wbr>Config<wbr>Params</a>
 							</li>
 							<li class=" tsd-kind-interface tsd-parent-kind-class">
+								<a href="../interfaces/resourceconfigurationv1.jsonobject.html" class="tsd-kind-icon">Json<wbr>Object</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-class">
 								<a href="../interfaces/resourceconfigurationv1.metricsmonitoring.html" class="tsd-kind-icon">Metrics<wbr>Monitoring</a>
+							</li>
+							<li class=" tsd-kind-interface tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="../interfaces/resourceconfigurationv1.response.html" class="tsd-kind-icon">Response</a>
 							</li>
 							<li class=" tsd-kind-interface tsd-parent-kind-class">
 								<a href="../interfaces/resourceconfigurationv1.updatebucketconfigparams.html" class="tsd-kind-icon">Update<wbr>Bucket<wbr>Config<wbr>Params</a>
@@ -506,47 +589,44 @@
 							<li class=" tsd-kind-type-alias tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
 								<a href="resourceconfigurationv1.html#callback" class="tsd-kind-icon">Callback</a>
 							</li>
-							<li class=" tsd-kind-type-alias tsd-parent-kind-class tsd-is-static">
-								<a href="resourceconfigurationv1.html#options" class="tsd-kind-icon">Options</a>
-							</li>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="resourceconfigurationv1.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="resourceconfigurationv1.html#_options" class="tsd-kind-icon">_options</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
-								<a href="resourceconfigurationv1.html#name" class="tsd-kind-icon">name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="resourceconfigurationv1.html#servicedefaults" class="tsd-kind-icon">service<wbr>Defaults</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
-								<a href="resourceconfigurationv1.html#serviceversion" class="tsd-kind-icon">service<wbr>Version</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="resourceconfigurationv1.html#tokenmanager" class="tsd-kind-icon">token<wbr>Manager</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
+								<a href="resourceconfigurationv1.html#default_service_name" class="tsd-kind-icon">DEFAULT_<wbr>SERVICE_<wbr>NAME</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-static">
-								<a href="resourceconfigurationv1.html#url-1" class="tsd-kind-icon">URL</a>
+								<a href="resourceconfigurationv1.html#default_service_url" class="tsd-kind-icon">DEFAULT_<wbr>SERVICE_<wbr>URL</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="resourceconfigurationv1.html#createrequest" class="tsd-kind-icon">create<wbr>Request</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="resourceconfigurationv1.html#disableretries" class="tsd-kind-icon">disable<wbr>Retries</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="resourceconfigurationv1.html#enableretries" class="tsd-kind-icon">enable<wbr>Retries</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="resourceconfigurationv1.html#getauthenticator" class="tsd-kind-icon">get<wbr>Authenticator</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="resourceconfigurationv1.html#getbucketconfig" class="tsd-kind-icon">get<wbr>Bucket<wbr>Config</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="resourceconfigurationv1.html#getservicecredentials" class="tsd-kind-icon">get<wbr>Service<wbr>Credentials</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="resourceconfigurationv1.html#preauthenticate" class="tsd-kind-icon">pre<wbr>Authenticate</a>
+								<a href="resourceconfigurationv1.html#gethttpclient" class="tsd-kind-icon">get<wbr>Http<wbr>Client</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="resourceconfigurationv1.html#setaccesstoken" class="tsd-kind-icon">set<wbr>Access<wbr>Token</a>
+								<a href="resourceconfigurationv1.html#setdefaultheaders" class="tsd-kind-icon">set<wbr>Default<wbr>Headers</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="resourceconfigurationv1.html#setenablegzipcompression" class="tsd-kind-icon">set<wbr>Enable<wbr>Gzip<wbr>Compression</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="resourceconfigurationv1.html#setserviceurl" class="tsd-kind-icon">set<wbr>Service<wbr>Url</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="resourceconfigurationv1.html#updatebucketconfig" class="tsd-kind-icon">update<wbr>Bucket<wbr>Config</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="resourceconfigurationv1.html#newinstance" class="tsd-kind-icon">new<wbr>Instance</a>
 							</li>
 						</ul>
 					</li>
