@@ -1,54 +1,47 @@
 {
   "name": "ibm-cos-sdk-config",
-  "version": "1.4.1",
-  "description": "IBM SDK for JavaScript",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "check-types": "tsc",
-    "precommit": "lint-staged",
-    "tslint:config": "tslint-config-prettier-check ./tslint.json",
-    "tslint:fix": "tslint --fix -p . -c tslint.json",
-    "tslint:check": "tslint -p . -c ./tslint.json",
-    "browserify": "browserify index.js --standalone IBMCOS --outfile dist/ibm-cos-sdk-js-config.js",
-    "build": "tsc && npm run browserify && npm run minify",
-    "minify": "uglifyjs --compress --mangle --output dist/ibm-cos-sdk-js-config.min.js --preamble \"// IBM COS\n// JavaScript SDK$npm_package_version\n// Generated at `date`\n// Copyright IBM ($npm_package_license)\n// $npm_package_homepage\" -- dist/ibm-cos-sdk-js-config.js",
-    "prepublishOnly": "npm run build"
-  },
+  "version": "2.0.0",
+  "description": "IBM COS Resource Configuration SDK for Node.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/IBM/ibm-cos-sdk-js-config.git"
   },
-  "author": {
-    "name": "IBM",
-    "email": "",
-    "url": "https://www.ibm.com/cloud/"
+  "keywords": [
+    "ibm"
+  ],
+  "author": "IBM Corp.",
+  "scripts": {
+    "eslint:fix": "eslint . --fix",
+    "eslint:check": "eslint . --cache",
+    "lint": "npm run eslint:check",
+    "lint-fix": "npm run eslint:fix",
+    "build": "tsc && cp package.json dist/",
+    "prepublishOnly": "npm run build",
+    "postversion": "tsc-publish --no-checks --dry-run"
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/IBM/ibm-cos-sdk-js-config",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
-    "@types/is-stream": "^1.1.0",
-    "@types/node": "^10.17.60",
-    "ibm-cloud-sdk-core": "^0.2.10"
+    "@types/node": "^12.12.6",
+    "extend": "^3.0.2",
+    "ibm-cloud-sdk-core": "^3.1.0"
   },
   "devDependencies": {
-    "@types/request": "^2.48.7",
-    "browserify": "^16.5.2",
-    "tslint": "^5.20.1",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-eslint-rules": "^5.4.0",
-    "typedoc": "^0.14.2",
-    "uglify-es": "^3.3.9"
-  },
-  "lint-staged": {
-    "**/*.ts": [
-      "tsc",
-      "tslint --fix -p . -c tslint.json",
-      "git add"
-    ],
-    "examples/*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "^8.24.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.3.6",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "tsc-publish": "^0.5.2",
+    "typedoc": "^0.18.0",
+    "typescript": "^4.8.4"
   }
 }

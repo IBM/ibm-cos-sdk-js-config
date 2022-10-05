@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 IBM Corp. All Rights Reserved.
+ * (C) Copyright IBM Corp. 2019, 2020.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,13 @@
  * limitations under the License.
  */
 
-/**
- * @module ibm-cos-resource-config-sdk
- */
-
-export import ResourceConfigurationV1 = require('./resource-configuration/v1');
+export {
+  NoAuthAuthenticator,
+  BasicAuthenticator,
+  BearerTokenAuthenticator,
+  IamAuthenticator,
+  CloudPakForDataAuthenticator,
+  IamTokenManager,
+  Cp4dTokenManager,
+  getAuthenticatorFromEnvironment,
+} from 'ibm-cloud-sdk-core';
