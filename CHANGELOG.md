@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2.0.1
+
+### Content
+
+#### Defect Fixes
+
+* Support for NodeJS 18
+* Update dependencies
+
 ## 2.0.0
 
 ### Content

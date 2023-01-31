@@ -1,11 +1,11 @@
 # Migration Guide - upgrading to ibm-cos-sdk-config@2.0.0
 
 - [Breaking Changes](#breaking-changes)
-  - [Changes in Package Imports](#Changes-in-Package-Imports)
-  - [Changes in Create Client](#Changes-in-Create-Client)
-  - [Changes in API Method Names](#Changes-in-API-Method-Names)
-  - [Changes in Response](#Changes-in-Response)
-  - [Change in Agent Name](#Change-in-Agent-Name)
+  - [Changes in Package Imports](#changes-in-package-imports)
+  - [Changes in Create Client](#changes-in-create-client)
+  - [Changes in API Method Names](#changes-in-api-method-names)
+  - [Changes in Response](#changes-in-response)
+  - [Change in Agent Name](#change-in-agent-name)
 
 ## Breaking changes
 
