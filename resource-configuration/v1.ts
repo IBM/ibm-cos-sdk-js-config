@@ -1,5 +1,5 @@
 /**
- * (C) Copyright IBM Corp. 2022.
+ * (C) Copyright IBM Corp. 2024.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
  */
 
 /**
- * IBM OpenAPI SDK Code Generator Version: 3.57.1-4c556507-20220928-143422
+ * IBM OpenAPI SDK Code Generator Version: 3.84.1-55f6d880-20240110-194020
  */
 
 import * as extend from 'extend';
@@ -23,9 +23,9 @@ import { IncomingHttpHeaders, OutgoingHttpHeaders } from 'http';
 import {
   Authenticator,
   BaseService,
+  UserOptions,
   getAuthenticatorFromEnvironment,
   validateParams,
-  UserOptions,
 } from 'ibm-cloud-sdk-core';
 import { getSdkHeaders } from '../lib/common';
 
@@ -50,7 +50,7 @@ class ResourceConfigurationV1 extends BaseService {
    * @param {UserOptions} [options] - The parameters to send to the service.
    * @param {string} [options.serviceName] - The name of the service to configure
    * @param {Authenticator} [options.authenticator] - The Authenticator object used to authenticate requests to the service
-   * @param {string} [options.serviceUrl] - The URL for the service
+   * @param {string} [options.serviceUrl] - The base URL for the service
    * @returns {ResourceConfigurationV1}
    */
 
@@ -75,7 +75,7 @@ class ResourceConfigurationV1 extends BaseService {
    * Construct a ResourceConfigurationV1 object.
    *
    * @param {Object} options - Options for the service.
-   * @param {string} [options.serviceUrl] - The base url to use when contacting the service. The base url may differ between IBM Cloud regions.
+   * @param {string} [options.serviceUrl] - The base URL for the service
    * @param {OutgoingHttpHeaders} [options.headers] - Default headers that shall be included with every request to the service.
    * @param {Authenticator} options.authenticator - The Authenticator object used to authenticate requests to the service
    * @constructor
@@ -121,11 +121,7 @@ class ResourceConfigurationV1 extends BaseService {
       'bucket': _params.bucket,
     };
 
-    const sdkHeaders = getSdkHeaders(
-      ResourceConfigurationV1.DEFAULT_SERVICE_NAME,
-      'v1',
-      'getBucketConfig'
-    );
+    const sdkHeaders = getSdkHeaders(ResourceConfigurationV1.DEFAULT_SERVICE_NAME, 'v1', 'getBucketConfig');
 
     const parameters = {
       options: {
@@ -170,6 +166,8 @@ class ResourceConfigurationV1 extends BaseService {
    * @param {MetricsMonitoring} [params.metricsMonitoring] - Enables sending metrics to IBM Cloud Monitoring. All
    * metrics are sent to the IBM Cloud Monitoring instance defined in the `monitoring_crn` field.
    * @param {number} [params.hardQuota] - Maximum bytes for this bucket.
+   * @param {ProtectionManagement} [params.protectionManagement] - Data structure holding protection management
+   * operations.
    * @param {string} [params.ifMatch] - An Etag previously returned in a header when fetching or updating a bucket's
    * metadata. If this value does not match the active Etag, the request will fail.
    * @param {OutgoingHttpHeaders} [params.headers] - Custom request headers
@@ -180,7 +178,7 @@ class ResourceConfigurationV1 extends BaseService {
   ): Promise<ResourceConfigurationV1.Response<ResourceConfigurationV1.EmptyObject>> {
     const _params = { ...params };
     const _requiredParams = ['bucket'];
-    const _validParams = ['bucket', 'firewall', 'activityTracking', 'metricsMonitoring', 'hardQuota', 'ifMatch', 'headers'];
+    const _validParams = ['bucket', 'firewall', 'activityTracking', 'metricsMonitoring', 'hardQuota', 'protectionManagement', 'ifMatch', 'headers'];
     const _validationErrors = validateParams(_params, _requiredParams, _validParams);
     if (_validationErrors) {
       return Promise.reject(_validationErrors);
@@ -191,17 +189,14 @@ class ResourceConfigurationV1 extends BaseService {
       'activity_tracking': _params.activityTracking,
       'metrics_monitoring': _params.metricsMonitoring,
       'hard_quota': _params.hardQuota,
+      'protection_management': _params.protectionManagement,
     };
 
     const path = {
       'bucket': _params.bucket,
     };
 
-    const sdkHeaders = getSdkHeaders(
-      ResourceConfigurationV1.DEFAULT_SERVICE_NAME,
-      'v1',
-      'updateBucketConfig'
-    );
+    const sdkHeaders = getSdkHeaders(ResourceConfigurationV1.DEFAULT_SERVICE_NAME, 'v1', 'updateBucketConfig');
 
     const parameters = {
       options: {
@@ -282,6 +277,8 @@ namespace ResourceConfigurationV1 {
     metricsMonitoring?: MetricsMonitoring;
     /** Maximum bytes for this bucket. */
     hardQuota?: number;
+    /** Data structure holding protection management operations. */
+    protectionManagement?: ProtectionManagement;
     /** An Etag previously returned in a header when fetching or updating a bucket's metadata. If this value does
      *  not match the active Etag, the request will fail.
      */
@@ -346,6 +343,8 @@ namespace ResourceConfigurationV1 {
     metrics_monitoring?: MetricsMonitoring;
     /** Maximum bytes for this bucket. */
     hard_quota?: number;
+    /** Data structure holding protection management response. */
+    protection_management?: ProtectionManagementResponse;
   }
 
   /** An access control mechanism based on the network (IP address) where request originated. Requests not originating from IP addresses listed in the `allowed_ip` field will be denied regardless of any access policies (including public access) that might otherwise permit the request.  Viewing or updating the `Firewall` element requires the requester to have the `manager` role. */
@@ -366,7 +365,17 @@ namespace ResourceConfigurationV1 {
      *  network types, [see the
      *  documentation](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#advanced-endpoint-types).
      */
-    allowed_network_type?: string[];
+    allowed_network_type?: Firewall.Constants.AllowedNetworkType[] | string[];
+  }
+  export namespace Firewall {
+    export namespace Constants {
+      /** Indicates which network types are allowed for bucket access. May contain `public`, `private`, and/or `direct` elements. Setting `allowed_network_type` to only `private` will prevent access to object storage from outside of the IBM Cloud.  The entire array will be overwritten in a `PATCH` operation. For more information on network types, [see the documentation](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#advanced-endpoint-types). */
+      export enum AllowedNetworkType {
+        PUBLIC = 'public',
+        PRIVATE = 'private',
+        DIRECT = 'direct',
+      }
+    }
   }
 
   /** Enables sending metrics to IBM Cloud Monitoring. All metrics are sent to the IBM Cloud Monitoring instance defined in the `monitoring_crn` field. */
@@ -380,6 +389,46 @@ namespace ResourceConfigurationV1 {
      *  account}:{monitoring service instance}::".
      */
     metrics_monitoring_crn?: string;
+  }
+
+  /** Data structure holding protection management operations. */
+  export interface ProtectionManagement {
+    /** If set to `activate`, protection management action on the bucket is being activated. */
+    requested_state?: ProtectionManagement.Constants.RequestedState | string;
+    /** This field is required when using requested_state\:`activate` and holds a JWT that is provided by the Cloud
+     *  Operator. This should be the encoded JWT.
+     */
+    protection_management_token?: string;
+  }
+  export namespace ProtectionManagement {
+    export namespace Constants {
+      /** If set to `activate`, protection management action on the bucket is being activated. */
+      export enum RequestedState {
+        ACTIVATE = 'activate',
+        DEACTIVATE = 'deactivate',
+      }
+    }
+  }
+
+  /** Data structure holding protection management response. */
+  export interface ProtectionManagementResponse {
+    /** Indicates the X number of protection management tokens that have been applied to the bucket in its lifetime. */
+    token_applied_counter?: string;
+    /** The 'protection management token list' holding a recent list of applied tokens. This list may contain a
+     *  subset of all tokens applied to the bucket, as indicated by the counter.
+     */
+    token_entries?: ProtectionManagementResponseTokenEntry[];
+  }
+
+  /** Data structure holding protection management token. */
+  export interface ProtectionManagementResponseTokenEntry {
+    token_id?: string;
+    token_expiration_time?: string;
+    token_reference_id?: string;
+    applied_time?: string;
+    invalidated_time?: string;
+    expiration_time?: string;
+    shorten_retention_flag?: boolean;
   }
 }
 
