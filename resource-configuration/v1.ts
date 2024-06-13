@@ -15,7 +15,7 @@
  */
 
 /**
- * IBM OpenAPI SDK Code Generator Version: 3.84.1-55f6d880-20240110-194020
+ * IBM OpenAPI SDK Code Generator Version: 3.91.0-d9755c53-20240605-153412
  */
 
 import * as extend from 'extend';
@@ -160,11 +160,17 @@ class ResourceConfigurationV1 extends BaseService {
    * originated. Requests not originating from IP addresses listed in the `allowed_ip` field will be denied regardless
    * of any access policies (including public access) that might otherwise permit the request.  Viewing or updating the
    * `Firewall` element requires the requester to have the `manager` role.
-   * @param {ActivityTracking} [params.activityTracking] - Enables sending log data to IBM Cloud Activity Tracker to
-   * provide visibility into object read and write events. All object events are sent to the activity tracker instance
-   * defined in the `activity_tracker_crn` field.
-   * @param {MetricsMonitoring} [params.metricsMonitoring] - Enables sending metrics to IBM Cloud Monitoring. All
-   * metrics are sent to the IBM Cloud Monitoring instance defined in the `monitoring_crn` field.
+   * @param {ActivityTracking} [params.activityTracking] - Enables sending log data to IBM Cloud Activity Tracker Event
+   * Routing to provide visibility into bucket management, object read and write events. (Recommended) When the
+   * `activity_tracker_crn` is not populated, then enabled events are sent to the Activity Tracker Event Routing
+   * instance at the container's location unless otherwise specified in the Activity Tracker Event Routing Event Routing
+   * service configuration. (Legacy) When the `activity_tracker_crn` is populated, then enabled events are sent to the
+   * Activity Tracker Event Routing instance specified.
+   * @param {MetricsMonitoring} [params.metricsMonitoring] - Enables sending metrics to IBM Cloud Monitoring.  All
+   * metrics are opt-in. (Recommended) When the `metrics_monitoring_crn` is not populated, then enabled metrics are sent
+   * to the Monitoring instance at the container's location unless otherwise specified in the Metrics Router service
+   * configuration. (Legacy) When the `metrics_monitoring_crn` is populated, then enabled metrics are sent to the
+   * Monitoring instance defined in the `metrics_monitoring_crn` field.
    * @param {number} [params.hardQuota] - Maximum bytes for this bucket.
    * @param {ProtectionManagement} [params.protectionManagement] - Data structure holding protection management
    * operations.
@@ -211,7 +217,7 @@ class ResourceConfigurationV1 extends BaseService {
           sdkHeaders,
           {
             'Content-Type': 'application/merge-patch+json',
-            'if-match': _params.ifMatch,
+            'If-Match': _params.ifMatch,
           },
           _params.headers
         ),
@@ -267,12 +273,19 @@ namespace ResourceConfigurationV1 {
      *  requires the requester to have the `manager` role.
      */
     firewall?: Firewall;
-    /** Enables sending log data to IBM Cloud Activity Tracker to provide visibility into object read and write
-     *  events. All object events are sent to the activity tracker instance defined in the `activity_tracker_crn` field.
+    /** Enables sending log data to IBM Cloud Activity Tracker Event Routing to provide visibility into bucket
+     *  management, object read and write events. (Recommended) When the `activity_tracker_crn` is not populated, then
+     *  enabled events are sent to the Activity Tracker Event Routing instance at the container's location unless
+     *  otherwise specified in the Activity Tracker Event Routing Event Routing service configuration. (Legacy) When the
+     *  `activity_tracker_crn` is populated, then enabled events are sent to the Activity Tracker Event Routing instance
+     *  specified.
      */
     activityTracking?: ActivityTracking;
-    /** Enables sending metrics to IBM Cloud Monitoring. All metrics are sent to the IBM Cloud Monitoring instance
-     *  defined in the `monitoring_crn` field.
+    /** Enables sending metrics to IBM Cloud Monitoring.  All metrics are opt-in. (Recommended) When the
+     *  `metrics_monitoring_crn` is not populated, then enabled metrics are sent to the Monitoring instance at the
+     *  container's location unless otherwise specified in the Metrics Router service configuration. (Legacy) When the
+     *  `metrics_monitoring_crn` is populated, then enabled metrics are sent to the Monitoring instance defined in the
+     *  `metrics_monitoring_crn` field.
      */
     metricsMonitoring?: MetricsMonitoring;
     /** Maximum bytes for this bucket. */
@@ -290,17 +303,22 @@ namespace ResourceConfigurationV1 {
    * model interfaces
    ************************/
 
-  /** Enables sending log data to IBM Cloud Activity Tracker to provide visibility into object read and write events. All object events are sent to the activity tracker instance defined in the `activity_tracker_crn` field. */
+  /** Enables sending log data to IBM Cloud Activity Tracker Event Routing to provide visibility into bucket management, object read and write events. (Recommended) When the `activity_tracker_crn` is not populated, then enabled events are sent to the Activity Tracker Event Routing instance at the container's location unless otherwise specified in the Activity Tracker Event Routing Event Routing service configuration. (Legacy) When the `activity_tracker_crn` is populated, then enabled events are sent to the Activity Tracker Event Routing instance specified. */
   export interface ActivityTracking {
-    /** If set to `true`, all object read events (i.e. downloads) will be sent to Activity Tracker. */
+    /** If set to `true`, all object read events (i.e. downloads) will be sent to Activity Tracker Event Routing. */
     read_data_events?: boolean;
-    /** If set to `true`, all object write events (i.e. uploads) will be sent to Activity Tracker. */
+    /** If set to `true`, all object write events (i.e. uploads) will be sent to Activity Tracker Event Routing. */
     write_data_events?: boolean;
-    /** Required the first time `activity_tracking` is configured. The instance of Activity Tracker that will
-     *  receive object event data. The format is "crn:v1:bluemix:public:logdnaat:{bucket location}:a/{storage
-     *  account}:{activity tracker service instance}::".
+    /** When the `activity_tracker_crn` is not populated, then enabled events are sent to the Activity Tracker Event
+     *  Routing instance associated to the container's location unless otherwise specified in the Activity Tracker Event
+     *  Routing Event Routing service configuration. If `activity_tracker_crn` is populated, then enabled events are
+     *  sent to the Activity Tracker Event Routing instance specified and bucket management events are always enabled.
      */
     activity_tracker_crn?: string;
+    /** This field only applies if `activity_tracker_crn` is not populated. If set to `true`, all bucket management
+     *  events will be sent to Activity Tracker Event Routing.
+     */
+    management_events?: boolean;
   }
 
   /** A bucket. */
@@ -333,12 +351,19 @@ namespace ResourceConfigurationV1 {
      *  requires the requester to have the `manager` role.
      */
     firewall?: Firewall;
-    /** Enables sending log data to IBM Cloud Activity Tracker to provide visibility into object read and write
-     *  events. All object events are sent to the activity tracker instance defined in the `activity_tracker_crn` field.
+    /** Enables sending log data to IBM Cloud Activity Tracker Event Routing to provide visibility into bucket
+     *  management, object read and write events. (Recommended) When the `activity_tracker_crn` is not populated, then
+     *  enabled events are sent to the Activity Tracker Event Routing instance at the container's location unless
+     *  otherwise specified in the Activity Tracker Event Routing Event Routing service configuration. (Legacy) When the
+     *  `activity_tracker_crn` is populated, then enabled events are sent to the Activity Tracker Event Routing instance
+     *  specified.
      */
     activity_tracking?: ActivityTracking;
-    /** Enables sending metrics to IBM Cloud Monitoring. All metrics are sent to the IBM Cloud Monitoring instance
-     *  defined in the `monitoring_crn` field.
+    /** Enables sending metrics to IBM Cloud Monitoring.  All metrics are opt-in. (Recommended) When the
+     *  `metrics_monitoring_crn` is not populated, then enabled metrics are sent to the Monitoring instance at the
+     *  container's location unless otherwise specified in the Metrics Router service configuration. (Legacy) When the
+     *  `metrics_monitoring_crn` is populated, then enabled metrics are sent to the Monitoring instance defined in the
+     *  `metrics_monitoring_crn` field.
      */
     metrics_monitoring?: MetricsMonitoring;
     /** Maximum bytes for this bucket. */
@@ -378,15 +403,16 @@ namespace ResourceConfigurationV1 {
     }
   }
 
-  /** Enables sending metrics to IBM Cloud Monitoring. All metrics are sent to the IBM Cloud Monitoring instance defined in the `monitoring_crn` field. */
+  /** Enables sending metrics to IBM Cloud Monitoring.  All metrics are opt-in. (Recommended) When the `metrics_monitoring_crn` is not populated, then enabled metrics are sent to the Monitoring instance at the container's location unless otherwise specified in the Metrics Router service configuration. (Legacy) When the `metrics_monitoring_crn` is populated, then enabled metrics are sent to the Monitoring instance defined in the `metrics_monitoring_crn` field. */
   export interface MetricsMonitoring {
     /** If set to `true`, all usage metrics (i.e. `bytes_used`) will be sent to the monitoring service. */
     usage_metrics_enabled?: boolean;
     /** If set to `true`, all request metrics (i.e. `rest.object.head`) will be sent to the monitoring service. */
     request_metrics_enabled?: boolean;
-    /** Required the first time `metrics_monitoring` is configured. The instance of IBM Cloud Monitoring that will
-     *  receive the bucket metrics. The format is "crn:v1:bluemix:public:logdnaat:{bucket location}:a/{storage
-     *  account}:{monitoring service instance}::".
+    /** When the `metrics_monitoring_crn` is not populated, then enabled metrics are sent to the monitoring instance
+     *  associated to the container's location unless otherwise specified in the Metrics Router service configuration.
+     *  If `metrics_monitoring_crn` is populated, then enabled events are sent to the Metrics Monitoring instance
+     *  specified.
      */
     metrics_monitoring_crn?: string;
   }

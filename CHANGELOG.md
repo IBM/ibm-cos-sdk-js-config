@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 2.1.0
+
+### Content
+
+#### Features
+
+* Sysdig Event Routing and Activity Tracker Routing Support
+
+#### Defect Fixes
+
+* Support for NodeJS 20 and 22
+* Update dependencies
+
 ## 2.0.6
 
 ### Content
