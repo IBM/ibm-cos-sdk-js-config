@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Enables sending metrics to IBM Cloud Monitoring. All metrics are sent to the IBM Cloud Monitoring instance defined in the <code>monitoring_crn</code> field.</p>
+						<p>Enables sending metrics to IBM Cloud Monitoring.  All metrics are opt-in. (Recommended) When the <code>metrics_monitoring_crn</code> is not populated, then enabled metrics are sent to the Monitoring instance at the container&#39;s location unless otherwise specified in the Metrics Router service configuration. (Legacy) When the <code>metrics_monitoring_crn</code> is populated, then enabled metrics are sent to the Monitoring instance defined in the <code>metrics_monitoring_crn</code> field.</p>
 					</div>
 				</div>
 			</section>
@@ -105,14 +105,15 @@
 					<div class="tsd-signature tsd-kind-icon">metrics_<wbr>monitoring_<wbr>crn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/c1b598e/resource-configuration/v1.ts#L391">resource-configuration/v1.ts:391</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/b4d5241/resource-configuration/v1.ts#L417">resource-configuration/v1.ts:417</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Required the first time <code>metrics_monitoring</code> is configured. The instance of IBM Cloud Monitoring that will
-								receive the bucket metrics. The format is &quot;crn:v1:bluemix:public:logdnaat:{bucket location}:a/{storage
-							account}:{monitoring service instance}::&quot;.</p>
+							<p>When the <code>metrics_monitoring_crn</code> is not populated, then enabled metrics are sent to the monitoring instance
+								associated to the container&#39;s location unless otherwise specified in the Metrics Router service configuration.
+								If <code>metrics_monitoring_crn</code> is populated, then enabled events are sent to the Metrics Monitoring instance
+							specified.</p>
 						</div>
 					</div>
 				</section>
@@ -122,7 +123,7 @@
 					<div class="tsd-signature tsd-kind-icon">request_<wbr>metrics_<wbr>enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/c1b598e/resource-configuration/v1.ts#L386">resource-configuration/v1.ts:386</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/b4d5241/resource-configuration/v1.ts#L411">resource-configuration/v1.ts:411</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -137,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">usage_<wbr>metrics_<wbr>enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/c1b598e/resource-configuration/v1.ts#L384">resource-configuration/v1.ts:384</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/b4d5241/resource-configuration/v1.ts#L409">resource-configuration/v1.ts:409</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">

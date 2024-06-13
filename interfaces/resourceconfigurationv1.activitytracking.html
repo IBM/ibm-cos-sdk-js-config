@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Enables sending log data to IBM Cloud Activity Tracker to provide visibility into object read and write events. All object events are sent to the activity tracker instance defined in the <code>activity_tracker_crn</code> field.</p>
+						<p>Enables sending log data to IBM Cloud Activity Tracker Event Routing to provide visibility into bucket management, object read and write events. (Recommended) When the <code>activity_tracker_crn</code> is not populated, then enabled events are sent to the Activity Tracker Event Routing instance at the container&#39;s location unless otherwise specified in the Activity Tracker Event Routing Event Routing service configuration. (Legacy) When the <code>activity_tracker_crn</code> is populated, then enabled events are sent to the Activity Tracker Event Routing instance specified.</p>
 					</div>
 				</div>
 			</section>
@@ -90,6 +90,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.activitytracking.html#activity_tracker_crn" class="tsd-kind-icon">activity_<wbr>tracker_<wbr>crn</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.activitytracking.html#management_events" class="tsd-kind-icon">management_<wbr>events</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.activitytracking.html#read_data_events" class="tsd-kind-icon">read_<wbr>data_<wbr>events</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.activitytracking.html#write_data_events" class="tsd-kind-icon">write_<wbr>data_<wbr>events</a></li>
 							</ul>
@@ -105,14 +106,31 @@
 					<div class="tsd-signature tsd-kind-icon">activity_<wbr>tracker_<wbr>crn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/c1b598e/resource-configuration/v1.ts#L303">resource-configuration/v1.ts:303</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/b4d5241/resource-configuration/v1.ts#L317">resource-configuration/v1.ts:317</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Required the first time <code>activity_tracking</code> is configured. The instance of Activity Tracker that will
-								receive object event data. The format is &quot;crn:v1:bluemix:public:logdnaat:{bucket location}:a/{storage
-							account}:{activity tracker service instance}::&quot;.</p>
+							<p>When the <code>activity_tracker_crn</code> is not populated, then enabled events are sent to the Activity Tracker Event
+								Routing instance associated to the container&#39;s location unless otherwise specified in the Activity Tracker Event
+								Routing Event Routing service configuration. If <code>activity_tracker_crn</code> is populated, then enabled events are
+							sent to the Activity Tracker Event Routing instance specified and bucket management events are always enabled.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="management_events" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> management_<wbr>events</h3>
+					<div class="tsd-signature tsd-kind-icon">management_<wbr>events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/b4d5241/resource-configuration/v1.ts#L321">resource-configuration/v1.ts:321</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This field only applies if <code>activity_tracker_crn</code> is not populated. If set to <code>true</code>, all bucket management
+							events will be sent to Activity Tracker Event Routing.</p>
 						</div>
 					</div>
 				</section>
@@ -122,12 +140,12 @@
 					<div class="tsd-signature tsd-kind-icon">read_<wbr>data_<wbr>events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/c1b598e/resource-configuration/v1.ts#L296">resource-configuration/v1.ts:296</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/b4d5241/resource-configuration/v1.ts#L309">resource-configuration/v1.ts:309</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>If set to <code>true</code>, all object read events (i.e. downloads) will be sent to Activity Tracker.</p>
+							<p>If set to <code>true</code>, all object read events (i.e. downloads) will be sent to Activity Tracker Event Routing.</p>
 						</div>
 					</div>
 				</section>
@@ -137,12 +155,12 @@
 					<div class="tsd-signature tsd-kind-icon">write_<wbr>data_<wbr>events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/c1b598e/resource-configuration/v1.ts#L298">resource-configuration/v1.ts:298</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/b4d5241/resource-configuration/v1.ts#L311">resource-configuration/v1.ts:311</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>If set to <code>true</code>, all object write events (i.e. uploads) will be sent to Activity Tracker.</p>
+							<p>If set to <code>true</code>, all object write events (i.e. uploads) will be sent to Activity Tracker Event Routing.</p>
 						</div>
 					</div>
 				</section>
@@ -168,6 +186,9 @@
 								<ul>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
 										<a href="resourceconfigurationv1.activitytracking.html#activity_tracker_crn" class="tsd-kind-icon">activity_<wbr>tracker_<wbr>crn</a>
+									</li>
+									<li class=" tsd-kind-property tsd-parent-kind-interface">
+										<a href="resourceconfigurationv1.activitytracking.html#management_events" class="tsd-kind-icon">management_<wbr>events</a>
 									</li>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
 										<a href="resourceconfigurationv1.activitytracking.html#read_data_events" class="tsd-kind-icon">read_<wbr>data_<wbr>events</a>
