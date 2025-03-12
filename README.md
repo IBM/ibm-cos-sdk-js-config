@@ -19,7 +19,7 @@ For release notes, see the [CHANGELOG](CHANGELOG.md).
 You'll need:
 
 * An instance of COS.
-* An API key from [IBM Cloud Identity and Access Management](https://cloud.ibm.com/docs/iam/users_roles.html).
+* An API key from [IBM Cloud Identity and Access Management](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui#account-management-actions-roles).
 
 ## Getting the SDK
 
