@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Response | ibm-cos-sdk-config</title>
+	<title>PolicyStatus | ibm-cos-sdk-config</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,16 @@
 					<a href="../classes/resourceconfigurationv1.html">ResourceConfigurationV1</a>
 				</li>
 				<li>
-					<a href="resourceconfigurationv1.response.html">Response</a>
+					<a href="../modules/resourceconfigurationv1.backuppolicy.html">BackupPolicy</a>
+				</li>
+				<li>
+					<a href="../modules/resourceconfigurationv1.backuppolicy.constants.html">Constants</a>
+				</li>
+				<li>
+					<a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html">PolicyStatus</a>
 				</li>
 			</ul>
-			<h1>Interface Response&lt;T&gt;</h1>
+			<h1>Enumeration PolicyStatus</h1>
 		</div>
 	</div>
 </header>
@@ -70,81 +76,87 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>An operation response.</p>
+						<p>The current status of the backup policy. pending : the policy has been received and has begun processing. initializing : pre-existing objects are being sync to the backup vault. active : the policy is active and healthy. action_needed : the policy is unhealthy and requires some intervention to recover degraded : the policy is unhealthy failed : the policy has failed unrecoverably.</p>
 					</div>
 				</div>
-			</section>
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>T</h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">Response</span>
-					</li>
-				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.response.html#headers" class="tsd-kind-icon">headers</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.response.html#result" class="tsd-kind-icon">result</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.response.html#status" class="tsd-kind-icon">status</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.response.html#statustext" class="tsd-kind-icon">status<wbr>Text</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html#action_needed" class="tsd-kind-icon">ACTION_<wbr>NEEDED</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html#active" class="tsd-kind-icon">ACTIVE</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html#degraded" class="tsd-kind-icon">DEGRADED</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html#failed" class="tsd-kind-icon">FAILED</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html#initializing" class="tsd-kind-icon">INITIALIZING</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html#pending" class="tsd-kind-icon">PENDING</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="headers" class="tsd-anchor"></a>
-					<h3>headers</h3>
-					<div class="tsd-signature tsd-kind-icon">headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IncomingHttpHeaders</span></div>
+				<h2>Enumeration members</h2>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="action_needed" class="tsd-anchor"></a>
+					<h3>ACTION_<wbr>NEEDED</h3>
+					<div class="tsd-signature tsd-kind-icon">ACTION_<wbr>NEEDED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;action_needed&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1167">resource-configuration/v1.ts:1167</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1513">resource-configuration/v1.ts:1513</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="result" class="tsd-anchor"></a>
-					<h3>result</h3>
-					<div class="tsd-signature tsd-kind-icon">result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="active" class="tsd-anchor"></a>
+					<h3>ACTIVE</h3>
+					<div class="tsd-signature tsd-kind-icon">ACTIVE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;active&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1164">resource-configuration/v1.ts:1164</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1512">resource-configuration/v1.ts:1512</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="status" class="tsd-anchor"></a>
-					<h3>status</h3>
-					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="degraded" class="tsd-anchor"></a>
+					<h3>DEGRADED</h3>
+					<div class="tsd-signature tsd-kind-icon">DEGRADED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;degraded&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1165">resource-configuration/v1.ts:1165</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1514">resource-configuration/v1.ts:1514</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="statustext" class="tsd-anchor"></a>
-					<h3>status<wbr>Text</h3>
-					<div class="tsd-signature tsd-kind-icon">status<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="failed" class="tsd-anchor"></a>
+					<h3>FAILED</h3>
+					<div class="tsd-signature tsd-kind-icon">FAILED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;failed&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1166">resource-configuration/v1.ts:1166</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1515">resource-configuration/v1.ts:1515</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="initializing" class="tsd-anchor"></a>
+					<h3>INITIALIZING</h3>
+					<div class="tsd-signature tsd-kind-icon">INITIALIZING<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;initializing&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1511">resource-configuration/v1.ts:1511</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="pending" class="tsd-anchor"></a>
+					<h3>PENDING</h3>
+					<div class="tsd-signature tsd-kind-icon">PENDING<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;pending&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1510">resource-configuration/v1.ts:1510</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -160,27 +172,31 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-namespace">
+						<a href="resourceconfigurationv1.backuppolicy.constants.backuptype.html" class="tsd-kind-icon">Backup<wbr>Type</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="../classes/resourceconfigurationv1.html" class="tsd-kind-icon">Resource<wbr>Configuration<wbr>V1</a>
+					<li class="current tsd-kind-enum tsd-parent-kind-namespace">
+						<a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html" class="tsd-kind-icon">Policy<wbr>Status</a>
 						<ul>
-							<li class="current tsd-kind-interface tsd-parent-kind-class tsd-has-type-parameter">
-								<a href="resourceconfigurationv1.response.html" class="tsd-kind-icon">Response</a>
-								<ul>
-									<li class=" tsd-kind-property tsd-parent-kind-interface">
-										<a href="resourceconfigurationv1.response.html#headers" class="tsd-kind-icon">headers</a>
-									</li>
-									<li class=" tsd-kind-property tsd-parent-kind-interface">
-										<a href="resourceconfigurationv1.response.html#result" class="tsd-kind-icon">result</a>
-									</li>
-									<li class=" tsd-kind-property tsd-parent-kind-interface">
-										<a href="resourceconfigurationv1.response.html#status" class="tsd-kind-icon">status</a>
-									</li>
-									<li class=" tsd-kind-property tsd-parent-kind-interface">
-										<a href="resourceconfigurationv1.response.html#statustext" class="tsd-kind-icon">status<wbr>Text</a>
-									</li>
-								</ul>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html#action_needed" class="tsd-kind-icon">ACTION_<wbr>NEEDED</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html#active" class="tsd-kind-icon">ACTIVE</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html#degraded" class="tsd-kind-icon">DEGRADED</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html#failed" class="tsd-kind-icon">FAILED</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html#initializing" class="tsd-kind-icon">INITIALIZING</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="resourceconfigurationv1.backuppolicy.constants.policystatus.html#pending" class="tsd-kind-icon">PENDING</a>
 							</li>
 						</ul>
 					</li>

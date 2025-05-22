@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UpdateBucketConfigParams | ibm-cos-sdk-config</title>
+	<title>CreateBackupPolicyParams | ibm-cos-sdk-config</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../classes/resourceconfigurationv1.html">ResourceConfigurationV1</a>
 				</li>
 				<li>
-					<a href="resourceconfigurationv1.updatebucketconfigparams.html">UpdateBucketConfigParams</a>
+					<a href="resourceconfigurationv1.createbackuppolicyparams.html">CreateBackupPolicyParams</a>
 				</li>
 			</ul>
-			<h1>Interface UpdateBucketConfigParams</h1>
+			<h1>Interface CreateBackupPolicyParams</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Parameters for the <code>updateBucketConfig</code> operation.</p>
+						<p>Parameters for the <code>createBackupPolicy</code> operation.</p>
 					</div>
 				</div>
 			</section>
@@ -78,7 +78,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">UpdateBucketConfigParams</span>
+						<span class="target">CreateBackupPolicyParams</span>
 					</li>
 				</ul>
 			</section>
@@ -89,14 +89,13 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#activitytracking" class="tsd-kind-icon">activity<wbr>Tracking</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#bucket" class="tsd-kind-icon">bucket</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#firewall" class="tsd-kind-icon">firewall</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#hardquota" class="tsd-kind-icon">hard<wbr>Quota</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#headers" class="tsd-kind-icon">headers</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#ifmatch" class="tsd-kind-icon">if<wbr>Match</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#metricsmonitoring" class="tsd-kind-icon">metrics<wbr>Monitoring</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.updatebucketconfigparams.html#protectionmanagement" class="tsd-kind-icon">protection<wbr>Management</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.createbackuppolicyparams.html#backuptype" class="tsd-kind-icon">backup<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.createbackuppolicyparams.html#bucket" class="tsd-kind-icon">bucket</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.createbackuppolicyparams.html#headers" class="tsd-kind-icon">headers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.createbackuppolicyparams.html#initialretention" class="tsd-kind-icon">initial<wbr>Retention</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.createbackuppolicyparams.html#md5" class="tsd-kind-icon">m<wbr>D5</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.createbackuppolicyparams.html#policyname" class="tsd-kind-icon">policy<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="resourceconfigurationv1.createbackuppolicyparams.html#targetbackupvaultcrn" class="tsd-kind-icon">target<wbr>Backup<wbr>Vault<wbr>Crn</a></li>
 							</ul>
 						</section>
 					</div>
@@ -105,22 +104,17 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="activitytracking" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> activity<wbr>Tracking</h3>
-					<div class="tsd-signature tsd-kind-icon">activity<wbr>Tracking<span class="tsd-signature-symbol">:</span> <a href="resourceconfigurationv1.activitytracking.html" class="tsd-signature-type">ActivityTracking</a></div>
+					<a name="backuptype" class="tsd-anchor"></a>
+					<h3>backup<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">backup<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/resourceconfigurationv1.createbackuppolicyconstants.backuptype.html" class="tsd-signature-type">BackupType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1335">resource-configuration/v1.ts:1335</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1198">resource-configuration/v1.ts:1198</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Enables sending log data to IBM Cloud Activity Tracker Event Routing to provide visibility into bucket
-								management, object read and write events. (Recommended) When the <code>activity_tracker_crn</code> is not populated, then
-								enabled events are sent to the Activity Tracker Event Routing instance at the container&#39;s location unless
-								otherwise specified in the Activity Tracker Event Routing Event Routing service configuration. (Legacy) When the
-								<code>activity_tracker_crn</code> is populated, then enabled events are sent to the Activity Tracker Event Routing instance
-							specified.</p>
+							<p>The type of backup to support. For LA+GA this is limited to &quot;continuous&quot;.</p>
 						</div>
 					</div>
 				</section>
@@ -130,45 +124,12 @@
 					<div class="tsd-signature tsd-kind-icon">bucket<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1321">resource-configuration/v1.ts:1321</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1188">resource-configuration/v1.ts:1188</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Name of a bucket.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="firewall" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> firewall</h3>
-					<div class="tsd-signature tsd-kind-icon">firewall<span class="tsd-signature-symbol">:</span> <a href="../modules/resourceconfigurationv1.firewall.html" class="tsd-signature-type">Firewall</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1327">resource-configuration/v1.ts:1327</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>An access control mechanism based on the network (IP address) where request originated. Requests not
-								originating from IP addresses listed in the <code>allowed_ip</code> field will be denied regardless of any access policies
-								(including public access) that might otherwise permit the request.  Viewing or updating the <code>Firewall</code> element
-							requires the requester to have the <code>manager</code> role.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="hardquota" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hard<wbr>Quota</h3>
-					<div class="tsd-signature tsd-kind-icon">hard<wbr>Quota<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1344">resource-configuration/v1.ts:1344</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Maximum bytes for this bucket.</p>
+							<p>Name of the COS Bucket name.</p>
 						</div>
 					</div>
 				</section>
@@ -178,57 +139,70 @@
 					<div class="tsd-signature tsd-kind-icon">headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">OutgoingHttpHeaders</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1351">resource-configuration/v1.ts:1351</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1201">resource-configuration/v1.ts:1201</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="ifmatch" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> if<wbr>Match</h3>
-					<div class="tsd-signature tsd-kind-icon">if<wbr>Match<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="initialretention" class="tsd-anchor"></a>
+					<h3>initial<wbr>Retention</h3>
+					<div class="tsd-signature tsd-kind-icon">initial<wbr>Retention<span class="tsd-signature-symbol">:</span> <a href="resourceconfigurationv1.deleteafterdays.html" class="tsd-signature-type">DeleteAfterDays</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1350">resource-configuration/v1.ts:1350</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1190">resource-configuration/v1.ts:1190</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>An Etag previously returned in a header when fetching or updating a bucket&#39;s metadata. If this value does
-							not match the active Etag, the request will fail.</p>
+							<p>The number of days to retain data within a RecoveryRange.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="metricsmonitoring" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> metrics<wbr>Monitoring</h3>
-					<div class="tsd-signature tsd-kind-icon">metrics<wbr>Monitoring<span class="tsd-signature-symbol">:</span> <a href="resourceconfigurationv1.metricsmonitoring.html" class="tsd-signature-type">MetricsMonitoring</a></div>
+					<a name="md5" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> m<wbr>D5</h3>
+					<div class="tsd-signature tsd-kind-icon">m<wbr>D5<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1342">resource-configuration/v1.ts:1342</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1200">resource-configuration/v1.ts:1200</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Enables sending metrics to IBM Cloud Monitoring.  All metrics are opt-in. (Recommended) When the
-								<code>metrics_monitoring_crn</code> is not populated, then enabled metrics are sent to the Monitoring instance at the
-								container&#39;s location unless otherwise specified in the Metrics Router service configuration. (Legacy) When the
-								<code>metrics_monitoring_crn</code> is populated, then enabled metrics are sent to the Monitoring instance defined in the
-							<code>metrics_monitoring_crn</code> field.</p>
+							<p>MD5 hash of content. If provided, the hash of the request must match.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="protectionmanagement" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> protection<wbr>Management</h3>
-					<div class="tsd-signature tsd-kind-icon">protection<wbr>Management<span class="tsd-signature-symbol">:</span> <a href="../modules/resourceconfigurationv1.protectionmanagement.html" class="tsd-signature-type">ProtectionManagement</a></div>
+					<a name="policyname" class="tsd-anchor"></a>
+					<h3>policy<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">policy<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1346">resource-configuration/v1.ts:1346</a></li>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1194">resource-configuration/v1.ts:1194</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Data structure holding protection management operations.</p>
+							<p>The name granted to the policy. Validation :</p>
+							<ul>
+								<li>chars limited to alphanumeric, underscore, hyphen and period.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="targetbackupvaultcrn" class="tsd-anchor"></a>
+					<h3>target<wbr>Backup<wbr>Vault<wbr>Crn</h3>
+					<div class="tsd-signature tsd-kind-icon">target<wbr>Backup<wbr>Vault<wbr>Crn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/IBM/ibm-cos-sdk-js-config/blob/fc63d03/resource-configuration/v1.ts#L1196">resource-configuration/v1.ts:1196</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The CRN for a COS BackupVault.</p>
 						</div>
 					</div>
 				</section>
@@ -250,31 +224,28 @@
 						<a href="../classes/resourceconfigurationv1.html" class="tsd-kind-icon">Resource<wbr>Configuration<wbr>V1</a>
 						<ul>
 							<li class="current tsd-kind-interface tsd-parent-kind-class">
-								<a href="resourceconfigurationv1.updatebucketconfigparams.html" class="tsd-kind-icon">Update<wbr>Bucket<wbr>Config<wbr>Params</a>
+								<a href="resourceconfigurationv1.createbackuppolicyparams.html" class="tsd-kind-icon">Create<wbr>Backup<wbr>Policy<wbr>Params</a>
 								<ul>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
-										<a href="resourceconfigurationv1.updatebucketconfigparams.html#activitytracking" class="tsd-kind-icon">activity<wbr>Tracking</a>
+										<a href="resourceconfigurationv1.createbackuppolicyparams.html#backuptype" class="tsd-kind-icon">backup<wbr>Type</a>
 									</li>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
-										<a href="resourceconfigurationv1.updatebucketconfigparams.html#bucket" class="tsd-kind-icon">bucket</a>
+										<a href="resourceconfigurationv1.createbackuppolicyparams.html#bucket" class="tsd-kind-icon">bucket</a>
 									</li>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
-										<a href="resourceconfigurationv1.updatebucketconfigparams.html#firewall" class="tsd-kind-icon">firewall</a>
+										<a href="resourceconfigurationv1.createbackuppolicyparams.html#headers" class="tsd-kind-icon">headers</a>
 									</li>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
-										<a href="resourceconfigurationv1.updatebucketconfigparams.html#hardquota" class="tsd-kind-icon">hard<wbr>Quota</a>
+										<a href="resourceconfigurationv1.createbackuppolicyparams.html#initialretention" class="tsd-kind-icon">initial<wbr>Retention</a>
 									</li>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
-										<a href="resourceconfigurationv1.updatebucketconfigparams.html#headers" class="tsd-kind-icon">headers</a>
+										<a href="resourceconfigurationv1.createbackuppolicyparams.html#md5" class="tsd-kind-icon">m<wbr>D5</a>
 									</li>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
-										<a href="resourceconfigurationv1.updatebucketconfigparams.html#ifmatch" class="tsd-kind-icon">if<wbr>Match</a>
+										<a href="resourceconfigurationv1.createbackuppolicyparams.html#policyname" class="tsd-kind-icon">policy<wbr>Name</a>
 									</li>
 									<li class=" tsd-kind-property tsd-parent-kind-interface">
-										<a href="resourceconfigurationv1.updatebucketconfigparams.html#metricsmonitoring" class="tsd-kind-icon">metrics<wbr>Monitoring</a>
-									</li>
-									<li class=" tsd-kind-property tsd-parent-kind-interface">
-										<a href="resourceconfigurationv1.updatebucketconfigparams.html#protectionmanagement" class="tsd-kind-icon">protection<wbr>Management</a>
+										<a href="resourceconfigurationv1.createbackuppolicyparams.html#targetbackupvaultcrn" class="tsd-kind-icon">target<wbr>Backup<wbr>Vault<wbr>Crn</a>
 									</li>
 								</ul>
 							</li>
