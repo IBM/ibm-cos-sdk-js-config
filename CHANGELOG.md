@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2.2.1
+
+### Content
+
+#### Defect Fixes
+
+* Support for NodeJS 24
+* Update dependencies
+
 ## 2.2.0
 
 ### Content
